@@ -58,7 +58,11 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.bgProgressView.gk_width       = self.gk_width - kProgressMargin * 2;
+    if (self.sliderBtn.hidden) {
+        self.bgProgressView.gk_width   = self.gk_width;
+    }else {
+        self.bgProgressView.gk_width   = self.gk_width - kProgressMargin * 2;
+    }
     
     self.bgProgressView.gk_centerY     = self.gk_height * 0.5;
     self.bufferProgressView.gk_centerY = self.gk_height * 0.5;
@@ -91,6 +95,7 @@
     [self addGestureRecognizer:self.tapGesture];
 }
 
+#pragma mark - Setter
 - (void)setMaximumTrackTintColor:(UIColor *)maximumTrackTintColor {
     _maximumTrackTintColor = maximumTrackTintColor;
     
@@ -138,8 +143,7 @@
     CGFloat finishValue  = self.bgProgressView.gk_width * value;
     self.sliderProgressView.gk_width = finishValue;
     
-    CGFloat buttonX = (self.gk_width - self.sliderBtn.gk_width) * value;
-    self.sliderBtn.gk_left = buttonX;
+    self.sliderBtn.gk_left = (self.gk_width - self.sliderBtn.gk_width) * value;
     
     self.lastPoint = self.sliderBtn.center;
 }
@@ -186,6 +190,21 @@
     self.bgProgressView.gk_height     = sliderHeight;
     self.bufferProgressView.gk_height = sliderHeight;
     self.sliderProgressView.gk_height = sliderHeight;
+}
+
+- (void)setIsHideSliderBlock:(BOOL)isHideSliderBlock {
+    _isHideSliderBlock = isHideSliderBlock;
+    
+    // 隐藏滑块，滑杆不可点击
+    if (isHideSliderBlock) {
+        self.sliderBtn.hidden = YES;
+        
+        self.bgProgressView.gk_left     = 0;
+        self.bufferProgressView.gk_left = 0;
+        self.sliderProgressView.gk_left = 0;
+        
+        self.allowTapped = NO;
+    }
 }
 
 #pragma mark - User Action

@@ -34,3 +34,6 @@ self.slider.minimumTrackTintColor = [UIColor redColor];
 // 设置滑杆高度
 self.slider.sliderHeight = 3;
 ```
+
+简书：[iOS--自定义滑杆GKSliderView](http://www.jianshu.com/p/b0631a206b2a)
+

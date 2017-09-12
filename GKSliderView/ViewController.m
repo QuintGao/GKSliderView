@@ -13,14 +13,18 @@
 @interface ViewController ()<GKSliderViewDelegate>
 
 @property (weak, nonatomic) IBOutlet GKSliderView *slider;
+@property (weak, nonatomic) IBOutlet GKSliderView *progress;
 
 @property (weak, nonatomic) IBOutlet UISlider *bufferSlider;
 @property (weak, nonatomic) IBOutlet UISlider *valueSlider;
 @property (weak, nonatomic) IBOutlet UIButton *loadingBtn;
 @property (weak, nonatomic) IBOutlet UIButton *heightBtn;
+@property (weak, nonatomic) IBOutlet UIButton *changeBtn;
 
 @property (nonatomic, assign) BOOL isShowLoading;
 @property (nonatomic, assign) CGFloat sliderH;
+
+@property (nonatomic, assign) BOOL isControlSlider;
 
 @end
 
@@ -29,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // slider
     self.slider.backgroundColor = [UIColor blackColor];
     
     self.slider.delegate = self;
@@ -42,6 +47,15 @@
     // 设置滑块的图片
     [self.slider setBackgroundImage:[UIImage imageNamed:@"cm2_fm_playbar_btn_dot"] forState:UIControlStateNormal];
     [self.slider setThumbImage:[UIImage imageNamed:@"cm2_fm_playbar_btn"] forState:UIControlStateNormal];
+    self.isControlSlider = YES;
+    
+    // progress
+    self.progress.maximumTrackTintColor = [UIColor blackColor];
+    self.progress.bufferTrackTintColor  = [UIColor whiteColor];
+    self.progress.minimumTrackTintColor = [UIColor redColor];
+    self.progress.sliderHeight = 2;
+    // 隐藏滑块
+    self.progress.isHideSliderBlock = YES;
     
     // loading默认显示
     self.isShowLoading = YES;
@@ -52,11 +66,28 @@
 }
 
 - (IBAction)bufferValue:(id)sender {
-    self.slider.bufferValue = self.bufferSlider.value;
+    if (self.isControlSlider) {
+        self.slider.bufferValue = self.bufferSlider.value;
+    }else {
+        self.progress.bufferValue = self.bufferSlider.value;
+    }
 }
 
 - (IBAction)value:(id)sender {
-    self.slider.value = self.valueSlider.value;
+    if (self.isControlSlider) {
+        self.slider.value = self.valueSlider.value;
+    }else {
+        self.progress.value = self.valueSlider.value;
+    }
+}
+
+- (IBAction)changeClick:(id)sender {
+    if (self.isControlSlider) {
+        [self.changeBtn setTitle:@"切换为控制slider" forState:UIControlStateNormal];
+    }else {
+        [self.changeBtn setTitle:@"切换为控制progress" forState:UIControlStateNormal];
+    }
+    self.isControlSlider = !self.isControlSlider;
 }
 
 - (IBAction)loadingClick:(id)sender {

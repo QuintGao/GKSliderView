@@ -45,10 +45,13 @@
 /** 缓存进度 */
 @property (nonatomic, assign) float bufferValue;
 
-/** 是否允许点击，默认是yes */
+/** 是否允许点击，默认是YES */
 @property (nonatomic, assign) BOOL allowTapped;
 /** 设置滑杆的高度 */
 @property (nonatomic, assign) CGFloat sliderHeight;
+
+/** 是否隐藏滑块（默认为NO） */
+@property (nonatomic, assign) BOOL isHideSliderBlock;
 
 // 设置滑块背景色
 - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
