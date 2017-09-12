@@ -220,8 +220,8 @@
 				TargetAttributes = {
 					794B86631F5FCF4600F150DC = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 85SKD6C7ZZ;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 9J2ZLU6Z7U;
+						ProvisioningStyle = Manual;
 					};
 					794B867C1F5FCF4600F150DC = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -441,11 +441,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 85SKD6C7ZZ;
+				DEVELOPMENT_TEAM = 9J2ZLU6Z7U;
 				INFOPLIST_FILE = GKSliderView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.maserati.swift.GKSliderView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jvtalking.slider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ccbba57f-97f6-4ffe-9154-b8a209a7d9cd";
+				PROVISIONING_PROFILE_SPECIFIER = "jvtalking___test";
 			};
 			name = Debug;
 		};
@@ -453,11 +455,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 85SKD6C7ZZ;
+				DEVELOPMENT_TEAM = 9J2ZLU6Z7U;
 				INFOPLIST_FILE = GKSliderView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.maserati.swift.GKSliderView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jvtalking.slider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ccbba57f-97f6-4ffe-9154-b8a209a7d9cd";
+				PROVISIONING_PROFILE_SPECIFIER = "jvtalking___test";
 			};
 			name = Release;
 		};

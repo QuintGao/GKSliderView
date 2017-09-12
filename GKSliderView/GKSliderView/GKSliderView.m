@@ -13,7 +13,7 @@
 /** 间距 */
 #define kProgressMargin 2.0
 /** 进度的宽度 */
-#define kProgressW    self.frame.size.width - kProgressMargin
+#define kProgressW    self.frame.size.width - kProgressMargin * 2
 /** 进度的高度 */
 #define kProgressH    3.0
 
@@ -58,11 +58,12 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.bgProgressView.centerY     = self.height * 0.5;
-    self.bufferProgressView.centerY = self.height * 0.5;
-    self.sliderProgressView.centerY = self.height * 0.5;
-    self.bgProgressView.width       = self.width - kProgressMargin * 2;
-    self.sliderBtn.centerY          = self.height * 0.5;
+    self.bgProgressView.gk_width       = self.gk_width - kProgressMargin * 2;
+    
+    self.bgProgressView.gk_centerY     = self.gk_height * 0.5;
+    self.bufferProgressView.gk_centerY = self.gk_height * 0.5;
+    self.sliderProgressView.gk_centerY = self.gk_height * 0.5;
+    self.sliderBtn.gk_centerY          = self.gk_height * 0.5;
 }
 
 /**
@@ -76,17 +77,18 @@
     [self addSubview:self.sliderProgressView];
     [self addSubview:self.sliderBtn];
     
-    self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-    
-    [self addGestureRecognizer:self.tapGesture];
-    
-    self.bgProgressView.frame = CGRectMake(kProgressMargin, 0, 0, kProgressH);
+    // 初始化frame
+    self.bgProgressView.frame     = CGRectMake(kProgressMargin, 0, 0, kProgressH);
     
     self.bufferProgressView.frame = self.bgProgressView.frame;
     
     self.sliderProgressView.frame = self.bgProgressView.frame;
     
-    self.sliderBtn.frame = CGRectMake(0, 0, kSliderBtnWH, kSliderBtnWH);
+    self.sliderBtn.frame          = CGRectMake(0, 0, kSliderBtnWH, kSliderBtnWH);
+    
+    // 添加点击手势
+    self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    [self addGestureRecognizer:self.tapGesture];
 }
 
 - (void)setMaximumTrackTintColor:(UIColor *)maximumTrackTintColor {
@@ -133,11 +135,11 @@
 - (void)setValue:(float)value {
     _value = value;
 
-    CGFloat finishValue  = self.bgProgressView.frame.size.width * value;
-    self.sliderProgressView.width = finishValue;
+    CGFloat finishValue  = self.bgProgressView.gk_width * value;
+    self.sliderProgressView.gk_width = finishValue;
     
-    CGFloat buttonX = (self.width - self.sliderBtn.width) * value;
-    self.sliderBtn.left = buttonX;
+    CGFloat buttonX = (self.gk_width - self.sliderBtn.gk_width) * value;
+    self.sliderBtn.gk_left = buttonX;
     
     self.lastPoint = self.sliderBtn.center;
 }
@@ -145,9 +147,9 @@
 - (void)setBufferValue:(float)bufferValue {
     _bufferValue = bufferValue;
     
-    CGFloat finishValue = self.bgProgressView.width * bufferValue;
+    CGFloat finishValue = self.bgProgressView.gk_width * bufferValue;
 
-    self.bufferProgressView.width = finishValue;
+    self.bufferProgressView.gk_width = finishValue;
 }
 
 - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state {
@@ -181,9 +183,9 @@
 - (void)setSliderHeight:(CGFloat)sliderHeight {
     _sliderHeight = sliderHeight;
     
-    self.bgProgressView.height     = sliderHeight;
-    self.bufferProgressView.height = sliderHeight;
-    self.sliderProgressView.height = sliderHeight;
+    self.bgProgressView.gk_height     = sliderHeight;
+    self.bufferProgressView.gk_height = sliderHeight;
+    self.sliderProgressView.gk_height = sliderHeight;
 }
 
 #pragma mark - User Action
@@ -207,8 +209,11 @@
     CGPoint point = [event.allTouches.anyObject locationInView:self];
     
     // 获取进度值 由于btn是从 0-(self.width - btn.width)
-    float value = (point.x - btn.width * 0.5) / (self.width - btn.width);
+    float value = (point.x - btn.gk_width * 0.5) / (self.gk_width - btn.gk_width);
+    
+    // value的值需在0-1之间
     value = value >= 1.0 ? 1.0 : value <= 0.0 ? 0.0 : value;
+    
     [self setValue:value];
     
     if ([self.delegate respondsToSelector:@selector(sliderValueChanged:)]) {
@@ -220,7 +225,7 @@
     CGPoint point = [tap locationInView:self];
     
     // 获取进度
-    float value = (point.x - self.bgProgressView.left) * 1.0 / self.bgProgressView.width;
+    float value = (point.x - self.bgProgressView.gk_left) * 1.0 / self.bgProgressView.gk_width;
     value = value >= 1.0 ? 1.0 : value <= 0 ? 0 : value;
     
     [self setValue:value];
@@ -287,9 +292,9 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        self.indicatorView.hidesWhenStopped = NO;
+        self.indicatorView.hidesWhenStopped       = NO;
         self.indicatorView.userInteractionEnabled = NO;
-        self.indicatorView.frame = CGRectMake(0, 0, 20, 20);
+        self.indicatorView.frame     = CGRectMake(0, 0, 20, 20);
         self.indicatorView.transform = CGAffineTransformMakeScale(0.6, 0.6);
         
         [self addSubview:self.indicatorView];
@@ -300,7 +305,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.indicatorView.center = CGPointMake(self.width / 2, self.height/ 2);
+    self.indicatorView.center = CGPointMake(self.gk_width / 2, self.gk_height/ 2);
     self.indicatorView.transform = CGAffineTransformMakeScale(0.6, 0.6);
 }
 
@@ -330,83 +335,83 @@
 
 @implementation UIView (GKFrame)
 
-- (void)setLeft:(CGFloat)left {
+- (void)setGk_left:(CGFloat)gk_left{
     CGRect f = self.frame;
-    f.origin.x = left;
+    f.origin.x = gk_left;
     self.frame = f;
 }
 
-- (CGFloat)left {
+- (CGFloat)gk_left {
     return self.frame.origin.x;
 }
 
-- (void)setTop:(CGFloat)top {
+- (void)setGk_top:(CGFloat)gk_top {
     CGRect f = self.frame;
-    f.origin.y = top;
+    f.origin.y = gk_top;
     self.frame = f;
 }
 
-- (CGFloat)top {
+- (CGFloat)gk_top {
     return self.frame.origin.y;
 }
 
-- (void)setRight:(CGFloat)right {
+- (void)setGk_right:(CGFloat)gk_right {
     CGRect f = self.frame;
-    f.origin.x = right - f.size.width;
+    f.origin.x = gk_right - f.size.width;
     self.frame = f;
 }
 
-- (CGFloat)right {
+- (CGFloat)gk_right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setBottom:(CGFloat)bottom {
+- (void)setGk_bottom:(CGFloat)gk_bottom {
     CGRect f = self.frame;
-    f.origin.y = bottom - f.size.height;
+    f.origin.y = gk_bottom - f.size.height;
     self.frame = f;
 }
 
-- (CGFloat)bottom {
+- (CGFloat)gk_bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setWidth:(CGFloat)width {
+- (void)setGk_width:(CGFloat)gk_width {
     CGRect f = self.frame;
-    f.size.width = width;
+    f.size.width = gk_width;
     self.frame = f;
 }
 
-- (CGFloat)width {
+- (CGFloat)gk_width {
     return self.frame.size.width;
 }
 
-- (void)setHeight:(CGFloat)height {
+- (void)setGk_height:(CGFloat)gk_height {
     CGRect f = self.frame;
-    f.size.height = height;
+    f.size.height = gk_height;
     self.frame = f;
 }
 
-- (CGFloat)height {
+- (CGFloat)gk_height {
     return self.frame.size.height;
 }
 
-- (void)setCenterX:(CGFloat)centerX {
+- (void)setGk_centerX:(CGFloat)gk_centerX {
     CGPoint c = self.center;
-    c.x = centerX;
+    c.x = gk_centerX;
     self.center = c;
 }
 
-- (CGFloat)centerX {
+- (CGFloat)gk_centerX {
     return self.center.x;
 }
 
-- (void)setCenterY:(CGFloat)centerY {
+- (void)setGk_centerY:(CGFloat)gk_centerY {
     CGPoint c = self.center;
-    c.y = centerY;
+    c.y = gk_centerY;
     self.center = c;
 }
 
-- (CGFloat)centerY {
+- (CGFloat)gk_centerY {
     return self.center.y;
 }
 

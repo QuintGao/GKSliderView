@@ -71,13 +71,13 @@
 
 @interface UIView (GKFrame)
 
-@property (nonatomic, assign) CGFloat top;
-@property (nonatomic, assign) CGFloat left;
-@property (nonatomic, assign) CGFloat right;
-@property (nonatomic, assign) CGFloat bottom;
-@property (nonatomic, assign) CGFloat width;
-@property (nonatomic, assign) CGFloat height;
-@property (nonatomic, assign) CGFloat centerX;
-@property (nonatomic, assign) CGFloat centerY;
+@property (nonatomic, assign) CGFloat gk_top;
+@property (nonatomic, assign) CGFloat gk_left;
+@property (nonatomic, assign) CGFloat gk_right;
+@property (nonatomic, assign) CGFloat gk_bottom;
+@property (nonatomic, assign) CGFloat gk_width;
+@property (nonatomic, assign) CGFloat gk_height;
+@property (nonatomic, assign) CGFloat gk_centerX;
+@property (nonatomic, assign) CGFloat gk_centerY;
 
 @end
