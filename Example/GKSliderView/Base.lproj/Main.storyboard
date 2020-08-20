@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wQg-tq-qST">
+            <objects>
+                <viewController id="whP-gf-Uak" customClass="GKViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仿网易云：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eG-fu-Gci">
+                                <rect key="frame" x="26" y="30" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PK进度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vM-c6-I5H">
+                                <rect key="frame" x="26" y="181" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进度条：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cn-Ms-2mR">
+                                <rect key="frame" x="26" y="282" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4t-rd-UdN" customClass="GKSliderView">
+                                <rect key="frame" x="26" y="71" width="323" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0hk-ls-Lf6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkf-ZL-V0h" customClass="GKSliderView">
+                                <rect key="frame" x="26" y="222" width="323" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OO6-wm-vO0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEo-6n-CO6" customClass="GKSliderView">
+                                <rect key="frame" x="26" y="323" width="323" height="10"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="lZ0-Pd-rXk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmI-ba-fDC" customClass="GKSliderView">
+                                <rect key="frame" x="26" y="121" width="343" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Bfa-If-Boj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="NEo-6n-CO6" secondAttribute="trailing" constant="10" id="3KV-DH-IbJ"/>
+                            <constraint firstItem="6eG-fu-Gci" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="30" id="4us-WQ-q5v"/>
+                            <constraint firstItem="6eG-fu-Gci" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="5Rt-DC-vNf"/>
+                            <constraint firstItem="NEo-6n-CO6" firstAttribute="top" secondItem="1cn-Ms-2mR" secondAttribute="bottom" constant="20" id="7Fr-JR-lcc"/>
+                            <constraint firstItem="NEo-6n-CO6" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="GcN-F7-YA3"/>
+                            <constraint firstItem="MmI-ba-fDC" firstAttribute="trailing" secondItem="TpU-gO-2f1" secondAttribute="trailingMargin" constant="10" id="MGc-hD-rpC"/>
+                            <constraint firstItem="dkf-ZL-V0h" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="PCN-dZ-4nU"/>
+                            <constraint firstItem="d4t-rd-UdN" firstAttribute="top" secondItem="6eG-fu-Gci" secondAttribute="bottom" constant="20" id="VHR-Nc-VX0"/>
+                            <constraint firstItem="MmI-ba-fDC" firstAttribute="top" secondItem="d4t-rd-UdN" secondAttribute="bottom" constant="10" id="Xuh-Gy-edh"/>
+                            <constraint firstItem="7vM-c6-I5H" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="avc-dP-HCI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d4t-rd-UdN" secondAttribute="trailing" constant="10" id="baA-XX-8a1"/>
+                            <constraint firstItem="dkf-ZL-V0h" firstAttribute="top" secondItem="7vM-c6-I5H" secondAttribute="bottom" constant="20" id="eZd-bO-rwB"/>
+                            <constraint firstItem="7vM-c6-I5H" firstAttribute="top" secondItem="MmI-ba-fDC" secondAttribute="bottom" constant="40" id="f4W-Ks-57t"/>
+                            <constraint firstItem="1cn-Ms-2mR" firstAttribute="top" secondItem="dkf-ZL-V0h" secondAttribute="bottom" constant="20" id="fJV-4k-bc9"/>
+                            <constraint firstItem="1cn-Ms-2mR" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="qZK-Ro-MpC"/>
+                            <constraint firstItem="MmI-ba-fDC" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="sDp-7v-WMG"/>
+                            <constraint firstItem="d4t-rd-UdN" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="vie-IM-Dps"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dkf-ZL-V0h" secondAttribute="trailing" constant="10" id="x8O-C9-3Cj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pkSliderView" destination="dkf-ZL-V0h" id="vlo-qn-VCa"/>
+                        <outlet property="progressView" destination="NEo-6n-CO6" id="MNB-CU-JHE"/>
+                        <outlet property="wyImgSliderView" destination="MmI-ba-fDC" id="qV4-Yr-KTq"/>
+                        <outlet property="wySliderView" destination="d4t-rd-UdN" id="XUF-PF-bjw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
+        </scene>
+    </scenes>
+</document>

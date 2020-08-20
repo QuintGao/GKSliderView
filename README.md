@@ -1,39 +1,29 @@
 # GKSliderView
-iOS - 自定义一个滑杆控件
 
-##前言
-最近做项目需要用到滑杆，但是用系统的UISlider发现并不能满足需求，于是自定义了一个滑杆。
+[![CI Status](https://img.shields.io/travis/1094887059@qq.com/GKSliderView.svg?style=flat)](https://travis-ci.org/1094887059@qq.com/GKSliderView)
+[![Version](https://img.shields.io/cocoapods/v/GKSliderView.svg?style=flat)](https://cocoapods.org/pods/GKSliderView)
+[![License](https://img.shields.io/cocoapods/l/GKSliderView.svg?style=flat)](https://cocoapods.org/pods/GKSliderView)
+[![Platform](https://img.shields.io/cocoapods/p/GKSliderView.svg?style=flat)](https://cocoapods.org/pods/GKSliderView)
 
-##说明
-本次自定义的滑杆是继承与UIView，里面加了一个自定义带菊花的UIButton作为滑块，用三个UIImageView来作为滑杆的背景、进度及滑过后的视图，可分别设置颜色或图片，另外为滑杆添加了滑动、点击的手势，可分别监听滑杆开始滑动、滑动中、结束滑动、点击的代理。话不多少，直接上图
+## Example
 
-![gkslider.gif](http://upload-images.jianshu.io/upload_images/1598505-755571d987ee0c5d.gif?imageMogr2/auto-orient/strip)
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-##主要代码
-算了就不贴了，想看的可以到github下载。
+## Requirements
 
-##使用方法
+## Installation
 
-```
-self.slider = [GKSliderView new];
-// 设置代理
-self.slider.delegate = self;
-// 默认滑杆颜色
-self.slider.maximumTrackTintColor = [UIColor lightGrayColor];
-// 设置滑杆进度颜色
-self.slider.bufferTrackTintColor  = [UIColor whiteColor];
-// 设置滑杆滑过颜色
-self.slider.minimumTrackTintColor = [UIColor redColor];
+GKSliderView is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-// 设置滑块的图片
-[self.slider setBackgroundImage:[UIImage imageNamed:@"cm2_fm_playbar_btn_dot"] forState:UIControlStateNormal];
-[self.slider setThumbImage:[UIImage imageNamed:@"cm2_fm_playbar_btn"] forState:UIControlStateNormal];
-
-// 显示菊花动画
-[self.slider showLoading];
-// 设置滑杆高度
-self.slider.sliderHeight = 3;
+```ruby
+pod 'GKSliderView'
 ```
 
-简书：[iOS--自定义滑杆GKSliderView](http://www.jianshu.com/p/b0631a206b2a)
+## Author
 
+1094887059@qq.com, 1094887059@qq.com
+
+## License
+
+GKSliderView is available under the MIT license. See the LICENSE file for more info.

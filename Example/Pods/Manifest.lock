@@ -1,0 +1,16 @@
+PODS:
+  - GKSliderView (1.0.0)
+
+DEPENDENCIES:
+  - GKSliderView (from `../`)
+
+EXTERNAL SOURCES:
+  GKSliderView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GKSliderView: dad9917043a8af1aee8dd140f3f4d876c151f555
+
+PODFILE CHECKSUM: b6f15aa2059290abb3fb82a80a18b850e1c6b62b
+
+COCOAPODS: 1.10.0.beta.2
