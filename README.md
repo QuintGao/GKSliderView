@@ -1,6 +1,6 @@
 # GKSliderView
 
-[![CI Status](https://img.shields.io/travis/1094887059@qq.com/GKSliderView.svg?style=flat)](https://travis-ci.org/1094887059@qq.com/GKSliderView)
+[![CI Status](https://img.shields.io/travis/QuintGao/GKSliderView.svg?style=flat)](https://travis-ci.org/QuintGao/GKSliderView)
 [![Version](https://img.shields.io/cocoapods/v/GKSliderView.svg?style=flat)](https://cocoapods.org/pods/GKSliderView)
 [![License](https://img.shields.io/cocoapods/l/GKSliderView.svg?style=flat)](https://cocoapods.org/pods/GKSliderView)
 [![Platform](https://img.shields.io/cocoapods/p/GKSliderView.svg?style=flat)](https://cocoapods.org/pods/GKSliderView)
@@ -22,7 +22,7 @@ pod 'GKSliderView'
 
 ## Author
 
-1094887059@qq.com, 1094887059@qq.com
+QuintGao, 1094887059@qq.com
 
 ## License
 
