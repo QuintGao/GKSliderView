@@ -295,7 +295,7 @@
     float value = self->_bufferValue;
     
     UIRectCorner corner = value == 1 ? UIRectCornerAllCorners : (UIRectCornerTopLeft | UIRectCornerBottomLeft);
-    CGRect frame = self.bufferProgressView.bounds;
+    CGRect frame = self.bgProgressView.bounds;
     
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:frame byRoundingCorners:corner cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
@@ -311,7 +311,7 @@
     float value = self->_value;
     
     UIRectCorner corner = value == 1 ? UIRectCornerAllCorners : (UIRectCornerTopLeft | UIRectCornerBottomLeft);
-    CGRect frame = self.sliderProgressView.bounds;
+    CGRect frame = self.bgProgressView.bounds;
     
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:frame byRoundingCorners:corner cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
@@ -412,7 +412,7 @@
 
 - (UITapGestureRecognizer *)tapGesture {
     if (!_tapGesture) {
-        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sliderTapped:)];
+        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
     }
     return _tapGesture;
 }

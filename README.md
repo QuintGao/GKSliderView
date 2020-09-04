@@ -27,3 +27,7 @@ QuintGao, 1094887059@qq.com
 ## License
 
 GKSliderView is available under the MIT license. See the LICENSE file for more info.
+
+## 版本记录
+
+2020.09.04  1.0.1：修复slider点击崩溃的bug，修改某些情况下切圆角失效的bug

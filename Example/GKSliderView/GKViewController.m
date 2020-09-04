@@ -59,7 +59,7 @@
     self.pkSliderView.isSliderAllowTapped = NO;
     self.pkSliderView.isSliderBlockAllowTapped = NO;
     self.pkSliderView.bgCornerRadius = 10.0f;
-    self.pkSliderView.value = 0.5f;
+    self.pkSliderView.value = 0.5;
     
     self.progressView.maximumTrackTintColor = [UIColor whiteColor];
     self.progressView.bufferTrackTintColor = [UIColor lightGrayColor];
