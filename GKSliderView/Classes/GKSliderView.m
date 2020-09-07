@@ -81,8 +81,6 @@
 /** 滑块 */
 @property (nonatomic, strong) GKSliderButton *sliderBtn;
 
-@property (nonatomic, assign) CGPoint lastPoint;
-
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
@@ -193,12 +191,10 @@
 - (void)setValue:(float)value {
     _value = value;
 
-    CGFloat finishValue  = self.bgProgressView.gk_width * value;
+    CGFloat finishValue  = (self.bgProgressView.gk_width - 2 * self.ignoreMargin) * value + self.ignoreMargin;
     self.sliderProgressView.gk_width = finishValue;
     
-    self.sliderBtn.gk_left = (self.gk_width - self.sliderBtn.gk_width) * value;
-    
-    self.lastPoint = self.sliderBtn.center;
+    self.sliderBtn.gk_left = (self.gk_width - 2 * self.ignoreMargin - self.sliderBtn.gk_width) * value + self.ignoreMargin;
     
     [self setupSliderRoundCorner];
 }
@@ -206,8 +202,7 @@
 - (void)setBufferValue:(float)bufferValue {
     _bufferValue = bufferValue;
     
-    CGFloat finishValue = self.bgProgressView.gk_width * bufferValue;
-
+    CGFloat finishValue = (self.bgProgressView.gk_width - 2 * self.ignoreMargin) * bufferValue + self.ignoreMargin;
     self.bufferProgressView.gk_width = finishValue;
     
     [self setupBufferRoundCorner];
@@ -322,26 +317,23 @@
 
 #pragma mark - User Action
 - (void)sliderBtnTouchBegin:(UIButton *)btn {
-    
     if ([self.delegate respondsToSelector:@selector(sliderTouchBegan:)]) {
         [self.delegate sliderTouchBegan:self.value];
     }
 }
 
 - (void)sliderBtnTouchEnded:(UIButton *)btn {
-    
     if ([self.delegate respondsToSelector:@selector(sliderTouchEnded:)]) {
         [self.delegate sliderTouchEnded:self.value];
     }
 }
 
 - (void)sliderBtnDragMoving:(UIButton *)btn event:(UIEvent *)event {
-    
     // 点击的位置
     CGPoint point = [event.allTouches.anyObject locationInView:self];
     
     // 获取进度值 由于btn是从 0-(self.width - btn.width)
-    float value = (point.x - btn.gk_width * 0.5) / (self.gk_width - btn.gk_width);
+    float value = (point.x - self.ignoreMargin - btn.gk_width * 0.5) / (self.gk_width - 2 * self.ignoreMargin - btn.gk_width);
     
     // value的值需在0-1之间
     value = value >= 1.0 ? 1.0 : value <= 0.0 ? 0.0 : value;
@@ -357,7 +349,7 @@
     CGPoint point = [tap locationInView:self];
     
     // 获取进度
-    float value = (point.x - self.bgProgressView.gk_left) * 1.0 / self.bgProgressView.gk_width;
+    float value = (point.x - self.ignoreMargin - self.bgProgressView.gk_left) * 1.0 / (self.bgProgressView.gk_width - 2 * self.ignoreMargin);
     value = value >= 1.0 ? 1.0 : value <= 0 ? 0 : value;
     
     [self setValue:value];
