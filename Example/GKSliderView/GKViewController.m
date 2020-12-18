@@ -31,6 +31,10 @@
     [self initSlider];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)initSlider {
     self.wySliderView.delegate = self;
     self.wySliderView.maximumTrackTintColor = [UIColor lightGrayColor];
