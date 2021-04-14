@@ -9,6 +9,13 @@
 #import "GKViewController.h"
 #import <GKSliderView/GKSliderView.h>
 
+typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
+    GradientTypeTopToBottom      = 0, // 从上到下
+    GradientTypeLeftToRight      = 1, // 从左到右
+    GradientTypeUpleftToLowright = 2, // 左上到右下
+    GradientTypeUprightToLowleft = 3, // 右上到左下
+};
+
 @interface GKViewController ()<GKSliderViewDelegate>
 
 @property (weak, nonatomic) IBOutlet GKSliderView *wySliderView;
@@ -19,6 +26,9 @@
 @property (weak, nonatomic) IBOutlet GKSliderView *pkSliderView;
 
 @property (weak, nonatomic) IBOutlet GKSliderView *progressView;
+
+@property (weak, nonatomic) IBOutlet GKSliderView *gradientSliderView;
+
 
 @end
 
@@ -73,6 +83,15 @@
     self.progressView.isSliderAllowTapped = NO;
     self.progressView.bufferValue = 0.6;
     self.progressView.value = 0.4;
+    
+    self.gradientSliderView.maximumTrackTintColor = UIColor.whiteColor;
+    self.gradientSliderView.sliderHeight = 6;
+    self.gradientSliderView.bgCornerRadius = 3;
+    self.gradientSliderView.value = 0.5;
+    self.gradientSliderView.delegate = self;
+    [self.gradientSliderView setBackgroundImage:[UIImage imageNamed:@"cm2_fm_playbar_btn_dot"] forState:UIControlStateNormal];
+    [self.gradientSliderView setThumbImage:[UIImage imageNamed:@"cm2_fm_playbar_btn"] forState:UIControlStateNormal];
+    [self sliderValueChanged:0.5];
 }
 
 #pragma mark - GKSliderViewDelegate
@@ -85,11 +104,64 @@
 }
 
 - (void)sliderValueChanged:(float)value {
+    CGFloat width = self.gradientSliderView.frame.size.width * value;
+    CGFloat height = self.gradientSliderView.frame.size.height;
+    CGSize size = CGSizeMake(width, height);
     
+    self.gradientSliderView.minimumTrackTintColor = [self gradientColorImageFromColors:@[UIColor.greenColor, UIColor.blueColor] gradientType:GradientTypeLeftToRight imgSize:size];
 }
 
 - (void)sliderTapped:(float)value {
     
+}
+
+#pragma mark - Color Extension
+- (UIColor *)gradientColorImageFromColors:(NSArray *)colors
+                             gradientType:(GradientType)gradientType
+                                  imgSize:(CGSize)imgSize {
+    NSMutableArray *ar = [NSMutableArray array];
+    
+    for(UIColor *c in colors) {
+        [ar addObject:(id)c.CGColor];
+    }
+    
+    UIGraphicsBeginImageContextWithOptions(imgSize, YES, 1);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    CGColorSpaceRef colorSpace = CGColorGetColorSpace([[colors lastObject] CGColor]);
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (CFArrayRef)ar, NULL);
+    CGPoint start;
+    CGPoint end;
+    
+    switch (gradientType) {
+        case GradientTypeTopToBottom:
+            start = CGPointMake(0.0, 0.0);
+            end = CGPointMake(0.0, imgSize.height);
+            break;
+        case GradientTypeLeftToRight:
+            start = CGPointMake(0.0, 0.0);
+            end = CGPointMake(imgSize.width, 0.0);
+            break;
+        case GradientTypeUpleftToLowright:
+            start = CGPointMake(0.0, 0.0);
+            end = CGPointMake(imgSize.width, imgSize.height);
+            break;
+        case GradientTypeUprightToLowleft:
+            start = CGPointMake(imgSize.width, 0.0);
+            end = CGPointMake(0.0, imgSize.height);
+            break;
+        default:
+            break;
+    }
+    
+    CGContextDrawLinearGradient(context, gradient, start, end, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    CGGradientRelease(gradient);
+    CGContextRestoreGState(context);
+    CGColorSpaceRelease(colorSpace);
+    UIGraphicsEndImageContext();
+    
+    return [UIColor colorWithPatternImage:image];
 }
 
 @end
