@@ -17,7 +17,7 @@
 /** 进度的高度 */
 #define kProgressH    3.0
 
-@interface GKSliderButton : UIButton
+@interface GKSliderButton()
 
 @property (nonatomic, strong) UIActivityIndicatorView *indicatorView;
 
@@ -81,6 +81,12 @@
 /** 滑块 */
 @property (nonatomic, strong) GKSliderButton *sliderBtn;
 
+/// 预览视图
+@property (nonatomic, strong) UIView *preview;
+
+/// 预览视图与滑块的间距
+@property (nonatomic, assign) CGFloat previewToSliderMargin;
+
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
@@ -107,6 +113,20 @@
     [self addSubViews];
 }
 
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    [super willMoveToSuperview:newSuperview];
+    
+    if (newSuperview) {
+        if ([self.previewDelegate respondsToSelector:@selector(sliderViewSetupPreview:)]) {
+            self.preview = [self.previewDelegate sliderViewSetupPreview:self];
+            if (self.preview) {
+                self.preview.hidden = YES;
+                [newSuperview addSubview:self.preview];
+            }
+        }
+    }
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     
@@ -123,6 +143,17 @@
     
     self.value = self.value;
     self.bufferValue = self.bufferValue;
+    
+    CGFloat margin = 10;
+    if ([self.previewDelegate respondsToSelector:@selector(sliderViewPreviewMargin:)]) {
+        margin = [self.previewDelegate sliderViewPreviewMargin:self];
+    }
+    CGPoint point = [self convertPoint:self.sliderBtn.center toView:self.superview];
+    
+    if (self.preview) {
+        self.preview.gk_centerX = point.x;
+        self.preview.gk_centerY = point.y - self.sliderBtn.gk_height * 0.5 - self.preview.gk_height * 0.5 - margin;
+    }
 }
 
 /**
@@ -315,16 +346,47 @@
     self.sliderProgressView.layer.mask = maskLayer;
 }
 
+- (void)setPreviewDelegate:(id<GKSliderViewPreviewDelegate>)previewDelegate {
+    _previewDelegate = previewDelegate;
+    
+    if (!self.superview) return;
+    if ([previewDelegate respondsToSelector:@selector(sliderViewSetupPreview:)]) {
+        self.preview = [previewDelegate sliderViewSetupPreview:self];
+        if (self.preview) {
+            self.preview.hidden = YES;
+            [self.superview addSubview:self.preview];
+        }
+    }
+}
+
 #pragma mark - User Action
 - (void)sliderBtnTouchBegin:(UIButton *)btn {
+    if (self.preview) {
+        self.preview.hidden = NO;
+    }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     if ([self.delegate respondsToSelector:@selector(sliderTouchBegan:)]) {
         [self.delegate sliderTouchBegan:self.value];
+    }
+#pragma clang diagnostic pop
+    if ([self.delegate respondsToSelector:@selector(sliderView:touchBegan:)]) {
+        [self.delegate sliderView:self touchBegan:self.value];
     }
 }
 
 - (void)sliderBtnTouchEnded:(UIButton *)btn {
+    if (self.preview) {
+        self.preview.hidden = YES;
+    }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     if ([self.delegate respondsToSelector:@selector(sliderTouchEnded:)]) {
         [self.delegate sliderTouchEnded:self.value];
+    }
+#pragma clang diagnostic pop
+    if ([self.delegate respondsToSelector:@selector(sliderView:touchEnded:)]) {
+        [self.delegate sliderView:self touchEnded:self.value];
     }
 }
 
@@ -340,8 +402,17 @@
     
     [self setValue:value];
     
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     if ([self.delegate respondsToSelector:@selector(sliderValueChanged:)]) {
         [self.delegate sliderValueChanged:value];
+    }
+#pragma clang diagnostic pop
+    if ([self.delegate respondsToSelector:@selector(sliderView:valueChanged:)]) {
+        [self.delegate sliderView:self valueChanged:value];
+    }
+    if ([self.previewDelegate respondsToSelector:@selector(sliderView:preview:valueChanged:)]) {
+        [self.previewDelegate sliderView:self preview:self.preview valueChanged:value];
     }
 }
 
@@ -354,8 +425,14 @@
     
     [self setValue:value];
     
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     if ([self.delegate respondsToSelector:@selector(sliderTapped:)]) {
         [self.delegate sliderTapped:value];
+    }
+#pragma clang diagnostic pop
+    if ([self.delegate respondsToSelector:@selector(sliderView:tapped:)]) {
+        [self.delegate sliderView:self tapped:value];
     }
 }
 

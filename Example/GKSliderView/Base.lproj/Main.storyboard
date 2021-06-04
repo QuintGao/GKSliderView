@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,35 +79,59 @@
                                     <constraint firstAttribute="height" constant="10" id="ooD-xZ-UfU"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定义滑块：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfJ-vE-uIe">
+                                <rect key="frame" x="26" y="424" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pac-bM-d2K" customClass="GKSliderView">
+                                <rect key="frame" x="26" y="465" width="323" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="SXg-cA-Qgh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="NEo-6n-CO6" secondAttribute="trailing" constant="10" id="3KV-DH-IbJ"/>
                             <constraint firstItem="6eG-fu-Gci" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="30" id="4us-WQ-q5v"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7vM-c6-I5H" secondAttribute="trailing" constant="20" symbolic="YES" id="4xU-1g-2su"/>
                             <constraint firstItem="6eG-fu-Gci" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="5Rt-DC-vNf"/>
                             <constraint firstItem="NEo-6n-CO6" firstAttribute="top" secondItem="1cn-Ms-2mR" secondAttribute="bottom" constant="20" id="7Fr-JR-lcc"/>
+                            <constraint firstItem="pac-bM-d2K" firstAttribute="trailing" secondItem="83k-y2-qaG" secondAttribute="trailing" id="E4H-k3-Ezg"/>
+                            <constraint firstItem="pac-bM-d2K" firstAttribute="leading" secondItem="WfJ-vE-uIe" secondAttribute="leading" id="FRF-HQ-qWb"/>
                             <constraint firstItem="NEo-6n-CO6" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="GcN-F7-YA3"/>
                             <constraint firstItem="83k-y2-qaG" firstAttribute="leading" secondItem="Gpn-6q-eOL" secondAttribute="leading" id="KaU-fv-9g8"/>
                             <constraint firstItem="83k-y2-qaG" firstAttribute="trailing" secondItem="NEo-6n-CO6" secondAttribute="trailing" id="LDc-zC-ESe"/>
                             <constraint firstItem="MmI-ba-fDC" firstAttribute="trailing" secondItem="TpU-gO-2f1" secondAttribute="trailingMargin" constant="10" id="MGc-hD-rpC"/>
                             <constraint firstItem="dkf-ZL-V0h" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="PCN-dZ-4nU"/>
+                            <constraint firstItem="WfJ-vE-uIe" firstAttribute="leading" secondItem="Gpn-6q-eOL" secondAttribute="leading" id="PMM-we-Hhu"/>
                             <constraint firstItem="d4t-rd-UdN" firstAttribute="top" secondItem="6eG-fu-Gci" secondAttribute="bottom" constant="20" id="VHR-Nc-VX0"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WfJ-vE-uIe" secondAttribute="trailing" constant="20" symbolic="YES" id="Wfh-oH-Wf9"/>
                             <constraint firstItem="MmI-ba-fDC" firstAttribute="top" secondItem="d4t-rd-UdN" secondAttribute="bottom" constant="10" id="Xuh-Gy-edh"/>
+                            <constraint firstItem="WfJ-vE-uIe" firstAttribute="top" secondItem="83k-y2-qaG" secondAttribute="bottom" constant="20" id="aAx-R1-L7W"/>
                             <constraint firstItem="7vM-c6-I5H" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="avc-dP-HCI"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6eG-fu-Gci" secondAttribute="trailing" constant="20" symbolic="YES" id="aw0-N9-aHY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d4t-rd-UdN" secondAttribute="trailing" constant="10" id="baA-XX-8a1"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1cn-Ms-2mR" secondAttribute="trailing" constant="20" symbolic="YES" id="blt-xx-qfC"/>
                             <constraint firstItem="dkf-ZL-V0h" firstAttribute="top" secondItem="7vM-c6-I5H" secondAttribute="bottom" constant="20" id="eZd-bO-rwB"/>
                             <constraint firstItem="7vM-c6-I5H" firstAttribute="top" secondItem="MmI-ba-fDC" secondAttribute="bottom" constant="40" id="f4W-Ks-57t"/>
                             <constraint firstItem="1cn-Ms-2mR" firstAttribute="top" secondItem="dkf-ZL-V0h" secondAttribute="bottom" constant="20" id="fJV-4k-bc9"/>
                             <constraint firstItem="83k-y2-qaG" firstAttribute="top" secondItem="Gpn-6q-eOL" secondAttribute="bottom" constant="20" id="j71-R1-5Dt"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gpn-6q-eOL" secondAttribute="trailing" constant="20" symbolic="YES" id="jlP-GG-5xv"/>
                             <constraint firstItem="Gpn-6q-eOL" firstAttribute="top" secondItem="NEo-6n-CO6" secondAttribute="bottom" constant="20" id="oQm-A4-wHW"/>
                             <constraint firstItem="1cn-Ms-2mR" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="qZK-Ro-MpC"/>
                             <constraint firstItem="MmI-ba-fDC" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="sDp-7v-WMG"/>
                             <constraint firstItem="Gpn-6q-eOL" firstAttribute="leading" secondItem="1cn-Ms-2mR" secondAttribute="leading" id="vVh-ec-zhx"/>
                             <constraint firstItem="d4t-rd-UdN" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="vie-IM-Dps"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dkf-ZL-V0h" secondAttribute="trailing" constant="10" id="x8O-C9-3Cj"/>
+                            <constraint firstItem="pac-bM-d2K" firstAttribute="top" secondItem="WfJ-vE-uIe" secondAttribute="bottom" constant="20" id="zZY-Px-WOQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="customSliderView" destination="pac-bM-d2K" id="qX6-t0-iIV"/>
                         <outlet property="gradientSliderView" destination="83k-y2-qaG" id="wrI-Xc-5Vi"/>
                         <outlet property="pkSliderView" destination="dkf-ZL-V0h" id="vlo-qn-VCa"/>
                         <outlet property="progressView" destination="NEo-6n-CO6" id="MNB-CU-JHE"/>

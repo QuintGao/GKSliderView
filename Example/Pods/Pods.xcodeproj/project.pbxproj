@@ -39,33 +39,33 @@
 
 /* Begin PBXFileReference section */
 		001F4B83796EAF1E3611D8588F354347 /* GKSliderView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GKSliderView.modulemap; sourceTree = "<group>"; };
-		0835B8D86D09F9141590F6E8B418315D /* GKSliderView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GKSliderView.framework; path = GKSliderView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0835B8D86D09F9141590F6E8B418315D /* GKSliderView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GKSliderView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0868A03B6AF38851C1FAD8A53BCD96DB /* Pods-GKSliderView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GKSliderView_Tests-dummy.m"; sourceTree = "<group>"; };
 		0DFCE9F3FFE05C3792CB729417775AC2 /* GKSliderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKSliderView.m; path = GKSliderView/Classes/GKSliderView.m; sourceTree = "<group>"; };
 		0FE1A834105DCD399E5526B02AB32755 /* Pods-GKSliderView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GKSliderView_Tests.modulemap"; sourceTree = "<group>"; };
 		11E582B798963DAF448703D4CF1F8BA6 /* GKSliderView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKSliderView.release.xcconfig; sourceTree = "<group>"; };
-		1CDEE4E07CD14655176BA4B20922D01C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1CDEE4E07CD14655176BA4B20922D01C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2016F2FCB9E9CF43E7B49B6E830B9783 /* GKSliderView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GKSliderView-dummy.m"; sourceTree = "<group>"; };
 		27F98C66609A9AAC83BD635C79A54B3C /* Pods-GKSliderView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKSliderView_Tests-Info.plist"; sourceTree = "<group>"; };
 		2C125F2076075562774D1E2B5E699FF0 /* Pods-GKSliderView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GKSliderView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		306A33AEE3D18A772BD8986CD8FD20F5 /* Pods-GKSliderView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GKSliderView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		37B50C8B6DAD9C3C82AE3F138DA0B164 /* Pods-GKSliderView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKSliderView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		4A6963759CBE0DE749938F5B30B0EA33 /* GKSliderView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GKSliderView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4A6963759CBE0DE749938F5B30B0EA33 /* GKSliderView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GKSliderView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		551679909B4729FCAB474007A74D0AD6 /* GKSliderView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKSliderView.debug.xcconfig; sourceTree = "<group>"; };
 		5541BFFCBF86AF0D33FEB4E8C0445FC2 /* GKSliderView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKSliderView-prefix.pch"; sourceTree = "<group>"; };
 		5B084B9284A4C9AD6D57B998951E47FC /* Pods-GKSliderView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKSliderView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		605FA97A1B1D6DB8E49705C63BBEDA2C /* Pods-GKSliderView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GKSliderView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		608B2471EDD1D6C050D2BD05214E4BBD /* Pods-GKSliderView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GKSliderView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6C27C2B817053333E2261831B0D213BE /* GKSliderView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKSliderView-umbrella.h"; sourceTree = "<group>"; };
-		7115DAE38F494AC10F2630217AA5B225 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		8A82939C0FAE253B2942B8115103796B /* Pods_GKSliderView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GKSliderView_Example.framework; path = "Pods-GKSliderView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7115DAE38F494AC10F2630217AA5B225 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8A82939C0FAE253B2942B8115103796B /* Pods_GKSliderView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GKSliderView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F62C7B756C7B1B230BB8A64B87B571 /* Pods-GKSliderView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GKSliderView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2B5D14F49E44BA9E63DE6C9583289E7 /* Pods-GKSliderView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GKSliderView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A4DCA2FA17EA52727F9C31833B84E7BA /* Pods-GKSliderView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GKSliderView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		AACDC149C4F05C548C9B6B34A5E5E7AC /* GKSliderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKSliderView.h; path = GKSliderView/Classes/GKSliderView.h; sourceTree = "<group>"; };
-		AC9A6D0E9964EAFB71CB46E86C29C1FF /* Pods_GKSliderView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GKSliderView_Tests.framework; path = "Pods-GKSliderView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9A6D0E9964EAFB71CB46E86C29C1FF /* Pods_GKSliderView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GKSliderView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A30C6661145426C3DE27B9CF86F756 /* Pods-GKSliderView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GKSliderView_Example-dummy.m"; sourceTree = "<group>"; };
 		C29A4668E10DF12D33F9F2068EA1DE76 /* Pods-GKSliderView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GKSliderView_Example-umbrella.h"; sourceTree = "<group>"; };
 		C37A9197A6F5566BA309D9F2B52209E8 /* Pods-GKSliderView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKSliderView_Example-Info.plist"; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1250;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -505,6 +505,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -667,6 +668,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -694,8 +696,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

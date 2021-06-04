@@ -8,23 +8,63 @@
 
 #import <UIKit/UIKit.h>
 
+// 过期提醒
+#define GKSliderViewDeprecated(DESCRIPTION) __attribute__((deprecated(DESCRIPTION)))
+
+@class GKSliderView;
+
+@protocol GKSliderViewPreviewDelegate <NSObject>
+
+/// 设置预览视图，预览视图与sliderView同级
+/// @param sliderView sliderView
+- (UIView *)sliderViewSetupPreview:(GKSliderView *)sliderView;
+
+@optional
+/// 预览视图与滑块的间距，默认10
+/// @param sliderView sliderView
+- (CGFloat)sliderViewPreviewMargin:(GKSliderView *)sliderView;
+
+/// 预览视图值改变代理
+/// @param sliderView sliderView
+/// @param preview 预览视图
+/// @param value 进度值
+- (void)sliderView:(GKSliderView *)sliderView preview:(UIView *)preview valueChanged:(float)value;
+
+@end
+
 @protocol GKSliderViewDelegate <NSObject>
 
 @optional
 // 滑块滑动开始
-- (void)sliderTouchBegan:(float)value;
+- (void)sliderTouchBegan:(float)value GKSliderViewDeprecated("使用sliderView:(GKSliderView *)sliderView touchBegan:(float)value代替");
 // 滑块滑动中
-- (void)sliderValueChanged:(float)value;
+- (void)sliderValueChanged:(float)value GKSliderViewDeprecated("使用sliderView:(GKSliderView *)sliderView valueChanged:(float)value代替");
 // 滑块滑动结束
-- (void)sliderTouchEnded:(float)value;
+- (void)sliderTouchEnded:(float)value GKSliderViewDeprecated("使用sliderView:(GKSliderView *)sliderView touchEnded:(float)value代替");
 // 滑杆点击
-- (void)sliderTapped:(float)value;
+- (void)sliderTapped:(float)value GKSliderViewDeprecated("使用sliderView:(GKSliderView *)sliderView tapped:(float)value代替");
+
+/// 滑块滑动开始
+- (void)sliderView:(GKSliderView *)sliderView touchBegan:(float)value;
+/// 滑块滑动结束
+- (void)sliderView:(GKSliderView *)sliderView touchEnded:(float)value;
+/// 滑块滑动中
+- (void)sliderView:(GKSliderView *)sliderView valueChanged:(float)value;
+/// 滑杆点击
+- (void)sliderView:(GKSliderView *)sliderView tapped:(float)value;
+
+@end
+
+@interface GKSliderButton : UIButton
 
 @end
 
 @interface GKSliderView : UIView
 
 @property (nonatomic, weak) id<GKSliderViewDelegate> delegate;
+
+/// 预览视图代理
+@property (nonatomic, weak) id<GKSliderViewPreviewDelegate> previewDelegate;
 
 #pragma mark - 滑杆相关属性及方法
 /** 默认滑杆的颜色 */
@@ -70,6 +110,12 @@
 
 /** 滑块是否允许点击，默认YES */
 @property (nonatomic, assign) BOOL isSliderBlockAllowTapped;
+
+/** 滑块 */
+@property (nonatomic, strong, readonly) GKSliderButton *sliderBtn;
+
+/// 预览视图
+@property (nonatomic, strong, readonly) UIView *preview;
 
 // 设置滑块背景色
 - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
