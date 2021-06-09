@@ -99,10 +99,11 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     self.customSliderView.maximumTrackTintColor = UIColor.whiteColor;
     self.customSliderView.minimumTrackTintColor = UIColor.redColor;
     self.customSliderView.sliderHeight = 2;
+    self.customSliderView.sliderBtn.enlargeClickRange = YES;
     self.customSliderView.sliderBtn.backgroundColor = UIColor.whiteColor;
     self.customSliderView.sliderBtn.layer.cornerRadius = 7.0f;
     self.customSliderView.sliderBtn.layer.masksToBounds = YES;
-    [self.customSliderView.sliderBtn setTitle:@"00:00/01:00" forState:UIControlStateNormal];
+    [self.customSliderView.sliderBtn setTitle:@"00:00:00/01:00:00" forState:UIControlStateNormal];
     [self.customSliderView.sliderBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     self.customSliderView.sliderBtn.titleLabel.font = [UIFont systemFontOfSize:10.0f];
     [self.customSliderView.sliderBtn sizeToFit];
@@ -130,8 +131,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
         
         self.gradientSliderView.minimumTrackTintColor = [self gradientColorImageFromColors:@[UIColor.greenColor, UIColor.blueColor] gradientType:GradientTypeLeftToRight imgSize:size];
     }else if (sliderView == self.customSliderView) {
-        int totalTime = 60;
-        int currentTime = 60 * value;
+        int totalTime = 1 * 60 * 60;
+        int currentTime = totalTime * value;
         NSString *total = [self timeFormattedMS:totalTime];
         NSString *current = [self timeFormattedMS:currentTime];
         NSString *text = [NSString stringWithFormat:@"%@/%@", current, total];
@@ -155,7 +156,7 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
         preview.backgroundColor = UIColor.whiteColor;
         preview.layer.cornerRadius = 10;
         preview.layer.masksToBounds = YES;
-        [preview setTitle:@"00:00/01:00" forState:UIControlStateNormal];
+        [preview setTitle:@"00:00:00/01:00:00" forState:UIControlStateNormal];
         [preview setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
         preview.titleLabel.font = [UIFont systemFontOfSize:14.0f];
         [preview sizeToFit];
@@ -175,8 +176,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
 - (void)sliderView:(GKSliderView *)sliderView preview:(UIView *)preview valueChanged:(float)value {
     if (sliderView == self.customSliderView) {
         GKSliderButton *btn = (GKSliderButton *)preview;
-        int totalTime = 60;
-        int currentTime = 60 * value;
+        int totalTime = 1 * 60 * 60;
+        int currentTime = totalTime * value;
         NSString *total = [self timeFormattedMS:totalTime];
         NSString *current = [self timeFormattedMS:currentTime];
         NSString *text = [NSString stringWithFormat:@"%@/%@", current, total];
@@ -189,7 +190,7 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     int minutes = (totalSeconds % 3600) / 60;
     int seconds = (totalSeconds % 3600) % 60;
     
-    return [NSString stringWithFormat:@"%02d:%02d",hours * 60 + minutes, seconds];
+    return [NSString stringWithFormat:@"%02d:%02d:%02d",hours, minutes, seconds];
 }
 
 #pragma mark - Color Extension

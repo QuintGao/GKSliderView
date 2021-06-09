@@ -57,6 +57,9 @@
 
 @interface GKSliderButton : UIButton
 
+// 是否扩大点击范围，默认NO
+@property (nonatomic, assign) BOOL enlargeClickRange;
+
 @end
 
 @interface GKSliderView : UIView

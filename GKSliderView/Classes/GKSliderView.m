@@ -61,7 +61,9 @@
     CGRect bounds = self.bounds;
     
     // 扩大点击区域
-    bounds = CGRectInset(bounds, -20, -20);
+    if (self.enlargeClickRange) {
+        bounds = CGRectInset(bounds, -20, -20);
+    }
     
     // 若点击的点在新的bounds里面。就返回yes
     return CGRectContainsPoint(bounds, point);
@@ -418,6 +420,7 @@
 
 - (void)tapped:(UITapGestureRecognizer *)tap {
     CGPoint point = [tap locationInView:self];
+    if (CGRectContainsPoint(self.sliderBtn.frame, point)) return;
     
     // 获取进度
     float value = (point.x - self.ignoreMargin - self.bgProgressView.gk_left) * 1.0 / (self.bgProgressView.gk_width - 2 * self.ignoreMargin);
@@ -476,6 +479,7 @@
         [_sliderBtn addTarget:self action:@selector(sliderBtnTouchEnded:) forControlEvents:UIControlEventTouchUpOutside];
         [_sliderBtn addTarget:self action:@selector(sliderBtnDragMoving:event:) forControlEvents:UIControlEventTouchDragInside];
         [_sliderBtn addTarget:self action:@selector(sliderBtnDragMoving:event:) forControlEvents:UIControlEventTouchDragOutside];
+        _sliderBtn.enlargeClickRange = YES;
     }
     return _sliderBtn;
 }
