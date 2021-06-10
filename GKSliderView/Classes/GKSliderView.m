@@ -381,7 +381,6 @@
 }
 
 - (void)sliderBtnTouchEnded:(UIButton *)btn {
-    NSLog(@"离开");
     if (self.preview) {
         self.preview.hidden = YES;
     }
