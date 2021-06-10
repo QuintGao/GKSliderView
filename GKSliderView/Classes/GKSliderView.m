@@ -91,6 +91,8 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
+@property (nonatomic, assign) CGPoint touchPoint;
+
 @end
 
 @implementation GKSliderView
@@ -362,7 +364,8 @@
 }
 
 #pragma mark - User Action
-- (void)sliderBtnTouchBegin:(UIButton *)btn {
+- (void)sliderBtnTouchBegin:(UIButton *)btn event:(UIEvent *)event {
+    self.touchPoint = [event.allTouches.anyObject locationInView:self];
     if (self.preview) {
         self.preview.hidden = NO;
     }
@@ -378,6 +381,7 @@
 }
 
 - (void)sliderBtnTouchEnded:(UIButton *)btn {
+    NSLog(@"离开");
     if (self.preview) {
         self.preview.hidden = YES;
     }
@@ -395,6 +399,8 @@
 - (void)sliderBtnDragMoving:(UIButton *)btn event:(UIEvent *)event {
     // 点击的位置
     CGPoint point = [event.allTouches.anyObject locationInView:self];
+    // 修复真机测试时按下就触发移动方法，导致的bug
+    if (CGPointEqualToPoint(self.touchPoint, point)) return;
     
     // 获取进度值 由于btn是从 0-(self.width - btn.width)
     float value = (point.x - self.ignoreMargin - btn.gk_width * 0.5) / (self.gk_width - 2 * self.ignoreMargin - btn.gk_width);
@@ -473,7 +479,7 @@
 - (GKSliderButton *)sliderBtn {
     if (!_sliderBtn) {
         _sliderBtn = [GKSliderButton new];
-        [_sliderBtn addTarget:self action:@selector(sliderBtnTouchBegin:) forControlEvents:UIControlEventTouchDown];
+        [_sliderBtn addTarget:self action:@selector(sliderBtnTouchBegin:event:) forControlEvents:UIControlEventTouchDown];
         [_sliderBtn addTarget:self action:@selector(sliderBtnTouchEnded:) forControlEvents:UIControlEventTouchCancel];
         [_sliderBtn addTarget:self action:@selector(sliderBtnTouchEnded:) forControlEvents:UIControlEventTouchUpInside];
         [_sliderBtn addTarget:self action:@selector(sliderBtnTouchEnded:) forControlEvents:UIControlEventTouchUpOutside];

@@ -101,7 +101,7 @@
 /** 滑杆背景圆角半径，设置此属性滑杆进度和缓冲进度不为1时只会左边切圆角，为1时左右都切圆角 */
 @property (nonatomic, assign) CGFloat bgCornerRadius;
 
-/** 忽略间距，设置次属性，滑杆左右会有响应的距离不计入滑杆的进度，默认0 */
+/** 忽略间距，设置此属性，滑杆左右会有相应的距离不计入滑杆的进度，默认0 */
 @property (nonatomic, assign) CGFloat ignoreMargin;
 
 #pragma mark - 滑块相关属性及方法
