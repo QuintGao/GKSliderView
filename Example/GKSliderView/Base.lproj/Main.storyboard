@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,16 +92,34 @@
                                     <constraint firstAttribute="height" constant="20" id="SXg-cA-Qgh"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仿微信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSa-qc-cA0">
+                                <rect key="frame" x="26" y="505" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66U-1z-GxP" customClass="GKSliderView">
+                                <rect key="frame" x="26" y="546" width="323" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="cdI-l9-6Qw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="66U-1z-GxP" firstAttribute="trailing" secondItem="pac-bM-d2K" secondAttribute="trailing" id="38r-S3-q8f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NEo-6n-CO6" secondAttribute="trailing" constant="10" id="3KV-DH-IbJ"/>
                             <constraint firstItem="6eG-fu-Gci" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="30" id="4us-WQ-q5v"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7vM-c6-I5H" secondAttribute="trailing" constant="20" symbolic="YES" id="4xU-1g-2su"/>
                             <constraint firstItem="6eG-fu-Gci" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="5Rt-DC-vNf"/>
+                            <constraint firstItem="66U-1z-GxP" firstAttribute="leading" secondItem="pac-bM-d2K" secondAttribute="leading" id="6xR-or-ieZ"/>
                             <constraint firstItem="NEo-6n-CO6" firstAttribute="top" secondItem="1cn-Ms-2mR" secondAttribute="bottom" constant="20" id="7Fr-JR-lcc"/>
+                            <constraint firstItem="VSa-qc-cA0" firstAttribute="leading" secondItem="WfJ-vE-uIe" secondAttribute="leading" id="8uL-Dm-HGE"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VSa-qc-cA0" secondAttribute="trailing" constant="20" symbolic="YES" id="9kX-of-siW"/>
                             <constraint firstItem="pac-bM-d2K" firstAttribute="trailing" secondItem="83k-y2-qaG" secondAttribute="trailing" id="E4H-k3-Ezg"/>
                             <constraint firstItem="pac-bM-d2K" firstAttribute="leading" secondItem="WfJ-vE-uIe" secondAttribute="leading" id="FRF-HQ-qWb"/>
+                            <constraint firstItem="66U-1z-GxP" firstAttribute="top" secondItem="VSa-qc-cA0" secondAttribute="bottom" constant="20" id="FWW-fK-xg5"/>
                             <constraint firstItem="NEo-6n-CO6" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="10" id="GcN-F7-YA3"/>
                             <constraint firstItem="83k-y2-qaG" firstAttribute="leading" secondItem="Gpn-6q-eOL" secondAttribute="leading" id="KaU-fv-9g8"/>
                             <constraint firstItem="83k-y2-qaG" firstAttribute="trailing" secondItem="NEo-6n-CO6" secondAttribute="trailing" id="LDc-zC-ESe"/>
@@ -119,6 +137,7 @@
                             <constraint firstItem="dkf-ZL-V0h" firstAttribute="top" secondItem="7vM-c6-I5H" secondAttribute="bottom" constant="20" id="eZd-bO-rwB"/>
                             <constraint firstItem="7vM-c6-I5H" firstAttribute="top" secondItem="MmI-ba-fDC" secondAttribute="bottom" constant="40" id="f4W-Ks-57t"/>
                             <constraint firstItem="1cn-Ms-2mR" firstAttribute="top" secondItem="dkf-ZL-V0h" secondAttribute="bottom" constant="20" id="fJV-4k-bc9"/>
+                            <constraint firstItem="VSa-qc-cA0" firstAttribute="top" secondItem="pac-bM-d2K" secondAttribute="bottom" constant="20" id="iYO-J1-Rgd"/>
                             <constraint firstItem="83k-y2-qaG" firstAttribute="top" secondItem="Gpn-6q-eOL" secondAttribute="bottom" constant="20" id="j71-R1-5Dt"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gpn-6q-eOL" secondAttribute="trailing" constant="20" symbolic="YES" id="jlP-GG-5xv"/>
                             <constraint firstItem="Gpn-6q-eOL" firstAttribute="top" secondItem="NEo-6n-CO6" secondAttribute="bottom" constant="20" id="oQm-A4-wHW"/>
@@ -135,6 +154,7 @@
                         <outlet property="gradientSliderView" destination="83k-y2-qaG" id="wrI-Xc-5Vi"/>
                         <outlet property="pkSliderView" destination="dkf-ZL-V0h" id="vlo-qn-VCa"/>
                         <outlet property="progressView" destination="NEo-6n-CO6" id="MNB-CU-JHE"/>
+                        <outlet property="wxSliderView" destination="66U-1z-GxP" id="cPC-2u-adi"/>
                         <outlet property="wyImgSliderView" destination="MmI-ba-fDC" id="qV4-Yr-KTq"/>
                         <outlet property="wySliderView" destination="d4t-rd-UdN" id="XUF-PF-bjw"/>
                     </connections>

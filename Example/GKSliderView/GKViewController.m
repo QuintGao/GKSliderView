@@ -31,6 +31,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
 
 @property (weak, nonatomic) IBOutlet GKSliderView *customSliderView;
 
+@property (weak, nonatomic) IBOutlet GKSliderView *wxSliderView;
+
 @end
 
 @implementation GKViewController
@@ -112,15 +114,37 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     frame.size.height = 14;
     self.customSliderView.sliderBtn.frame = frame;
     self.customSliderView.value = 0;
+    
+    // 微信播放器
+    self.wxSliderView.sliderBtn.backgroundColor = UIColor.whiteColor;
+    self.wxSliderView.sliderBtn.layer.masksToBounds = YES;
+    self.wxSliderView.delegate = self;
+    [self showSmallSlider];
+}
+
+- (void)showSmallSlider {
+    CGRect frame = self.wxSliderView.sliderBtn.frame;
+    frame.size = CGSizeMake(8, 8);
+    self.wxSliderView.sliderBtn.frame = frame;
+    self.wxSliderView.sliderBtn.layer.cornerRadius = 4;
 }
 
 #pragma mark - GKSliderViewDelegate
 - (void)sliderView:(GKSliderView *)sliderView touchBegan:(float)value {
-    
+    if (sliderView == self.wxSliderView) {
+        CGRect frame = self.wxSliderView.sliderBtn.frame;
+        frame.size = CGSizeMake(20, 20);
+        self.wxSliderView.sliderBtn.frame = frame;
+        self.wxSliderView.sliderBtn.layer.cornerRadius = 10;
+    }
 }
 
 - (void)sliderView:(GKSliderView *)sliderView touchEnded:(float)value {
-    
+    if (sliderView == self.wxSliderView) {
+        // 3秒后显示小slider
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showSmallSlider) object:nil];
+        [self performSelector:@selector(showSmallSlider) withObject:nil afterDelay:3.0f];
+    }
 }
 
 - (void)sliderView:(GKSliderView *)sliderView valueChanged:(float)value {
