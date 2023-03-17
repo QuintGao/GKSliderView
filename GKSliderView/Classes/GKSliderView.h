@@ -62,6 +62,14 @@
 
 @end
 
+@interface GKLineLoadingView : UIView
+
++ (void)showLoadingInView:(UIView *)view lineHeight:(CGFloat)lineHeight;
+
++ (void)hideLoadingInView:(UIView *)view;
+
+@end
+
 @interface GKSliderView : UIView
 
 @property (nonatomic, weak) id<GKSliderViewDelegate> delegate;
@@ -120,6 +128,9 @@
 /// 预览视图
 @property (nonatomic, strong, readonly) UIView *preview;
 
+/// 加载动画的高度，默认滑杆的高度
+@property (nonatomic, assign) CGFloat lineHeight;
+
 // 设置滑块背景色
 - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
 // 设置滑块图片
@@ -129,6 +140,11 @@
 - (void)showLoading;
 // 隐藏菊花动画
 - (void)hideLoading;
+
+// 显示加载动画
+- (void)showLineLoading;
+// 隐藏加载动画
+- (void)hideLineLoading;
 
 @end
 

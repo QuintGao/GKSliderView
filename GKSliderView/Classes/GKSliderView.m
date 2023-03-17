@@ -17,6 +17,9 @@
 /** 进度的高度 */
 #define kProgressH    3.0
 
+#define kLineLoadingDuration 0.75
+#define kLineLoadingColor    [UIColor whiteColor]
+
 @interface GKSliderButton()
 
 @property (nonatomic, strong) UIActivityIndicatorView *indicatorView;
@@ -33,7 +36,6 @@
         self.indicatorView.frame     = CGRectMake(0, 0, 20, 20);
         self.indicatorView.transform = CGAffineTransformMakeScale(0.6, 0.6);
         self.indicatorView.hidden = YES;
-        
         [self addSubview:self.indicatorView];
     }
     return self;
@@ -42,7 +44,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.indicatorView.center = CGPointMake(self.gk_width / 2, self.gk_height/ 2);
+    self.indicatorView.center = CGPointMake(self.gk_width * 0.5, self.gk_height * 0.5);
     self.indicatorView.transform = CGAffineTransformMakeScale(0.6, 0.6);
 }
 
@@ -67,6 +69,69 @@
     
     // 若点击的点在新的bounds里面。就返回yes
     return CGRectContainsPoint(bounds, point);
+}
+
+@end
+
+@implementation GKLineLoadingView
+
++ (void)showLoadingInView:(UIView *)view lineHeight:(CGFloat)lineHeight {
+    GKLineLoadingView *loadingView = [[GKLineLoadingView alloc] initWithFrame:view.frame lineHeight:lineHeight];
+    [view addSubview:loadingView];
+    [loadingView startLoading];
+}
+
++ (void)hideLoadingInView:(UIView *)view {
+    NSEnumerator *subviewsEnum = view.subviews.reverseObjectEnumerator;
+    for (UIView *subview in subviewsEnum) {
+        if ([subview isKindOfClass:GKLineLoadingView.class]) {
+            GKLineLoadingView *loadingView = (GKLineLoadingView *)subview;
+            [loadingView stopLoading];
+            [loadingView removeFromSuperview];
+        }
+    }
+}
+
+- (instancetype)initWithFrame:(CGRect)frame lineHeight:(CGFloat)lineHeight {
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = kLineLoadingColor;
+        self.center = CGPointMake(frame.size.width * 0.5, frame.size.height * 0.5);
+        self.bounds = CGRectMake(0, 0, 1.0f, lineHeight);
+    }
+    return self;
+}
+
+- (void)startLoading {
+    [self stopLoading];
+    
+    self.hidden = NO;
+    // 创建动画组
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.duration = kLineLoadingDuration;
+    animationGroup.beginTime = CACurrentMediaTime();
+    animationGroup.repeatCount = MAXFLOAT;
+    animationGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    // x轴缩放动画（transform.scale是以view的中心的为中心开始缩放的）
+    CABasicAnimation *scaleAnimation = [CABasicAnimation animation];
+    scaleAnimation.keyPath = @"transform.scale.x";
+    scaleAnimation.fromValue = @(1.0f);
+    scaleAnimation.toValue = @(1.0f * self.superview.frame.size.width);
+    
+    // 透明度渐变动画
+    CABasicAnimation *alphaAnimation = [CABasicAnimation animation];
+    alphaAnimation.keyPath = @"opacity";
+    alphaAnimation.fromValue = @(1.0f);
+    alphaAnimation.toValue = @(0.5f);
+    
+    animationGroup.animations = @[scaleAnimation, alphaAnimation];
+    // 添加动画
+    [self.layer addAnimation:animationGroup forKey:@"lineLoading"];
+}
+
+- (void)stopLoading {
+    [self.layer removeAnimationForKey:@"lineLoading"];
+    self.hidden = YES;
 }
 
 @end
@@ -286,6 +351,25 @@
     [self.sliderBtn hideActivityAnim];
 }
 
+- (void)showLineLoading {
+    self.bgProgressView.hidden = YES;
+    self.bufferProgressView.hidden = YES;
+    self.sliderProgressView.hidden = YES;
+    self.sliderBtn.hidden = YES;
+    
+    CGFloat lineHeight = self.lineHeight > 0 ? self.lineHeight : self.bgProgressView.gk_height;
+    
+    [GKLineLoadingView showLoadingInView:self lineHeight:lineHeight];
+}
+
+- (void)hideLineLoading {
+    self.bgProgressView.hidden = NO;
+    self.bufferProgressView.hidden = NO;
+    self.sliderProgressView.hidden = NO;
+    self.sliderBtn.hidden = NO;
+    [GKLineLoadingView hideLoadingInView:self];
+}
+
 - (void)setIsSliderAllowTapped:(BOOL)isSliderAllowTapped {
     _isSliderAllowTapped = isSliderAllowTapped;
     
@@ -445,7 +529,7 @@
 }
 
 #pragma mark - 懒加载
-- (UIView *)bgProgressView {
+- (UIImageView *)bgProgressView {
     if (!_bgProgressView) {
         _bgProgressView = [UIImageView new];
         _bgProgressView.backgroundColor = [UIColor grayColor];
@@ -455,7 +539,7 @@
     return _bgProgressView;
 }
 
-- (UIView *)bufferProgressView {
+- (UIImageView *)bufferProgressView {
     if (!_bufferProgressView) {
         _bufferProgressView = [UIImageView new];
         _bufferProgressView.backgroundColor = [UIColor whiteColor];
@@ -465,7 +549,7 @@
     return _bufferProgressView;
 }
 
-- (UIView *)sliderProgressView {
+- (UIImageView *)sliderProgressView {
     if (!_sliderProgressView) {
         _sliderProgressView = [UIImageView new];
         _sliderProgressView.backgroundColor = [UIColor redColor];

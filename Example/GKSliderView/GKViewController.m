@@ -33,6 +33,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
 
 @property (weak, nonatomic) IBOutlet GKSliderView *wxSliderView;
 
+@property (weak, nonatomic) IBOutlet GKSliderView *lineSliderView;
+
 @end
 
 @implementation GKViewController
@@ -120,6 +122,17 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     self.wxSliderView.sliderBtn.layer.masksToBounds = YES;
     self.wxSliderView.delegate = self;
     [self showSmallSlider];
+    
+    self.lineSliderView.maximumTrackTintColor = UIColor.grayColor;
+    self.lineSliderView.bufferTrackTintColor = UIColor.lightGrayColor;
+    self.lineSliderView.minimumTrackTintColor = UIColor.whiteColor;
+    self.lineSliderView.sliderBtn.backgroundColor = UIColor.whiteColor;
+    self.lineSliderView.sliderBtn.layer.masksToBounds = YES;
+    self.lineSliderView.sliderBtn.layer.cornerRadius = 10;
+    self.lineSliderView.bufferValue = 0.7;
+    self.lineSliderView.value = 0.4;
+    [self showLineLoading];
+    
 }
 
 - (void)showSmallSlider {
@@ -127,6 +140,14 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     frame.size = CGSizeMake(8, 8);
     self.wxSliderView.sliderBtn.frame = frame;
     self.wxSliderView.sliderBtn.layer.cornerRadius = 4;
+}
+
+- (void)showLineLoading {
+    [self.lineSliderView showLineLoading];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.lineSliderView hideLineLoading];
+        [self performSelector:@selector(showLineLoading) withObject:nil afterDelay:3.0f];
+    });
 }
 
 #pragma mark - GKSliderViewDelegate
