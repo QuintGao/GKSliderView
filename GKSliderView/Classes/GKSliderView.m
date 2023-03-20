@@ -58,17 +58,20 @@
     [self.indicatorView stopAnimating];
 }
 
+- (CGRect)enlargedRect {
+    return CGRectMake(self.bounds.origin.x - self.enlargeEdge.left,
+                      self.bounds.origin.y - self.enlargeEdge.top,
+                      self.bounds.size.width + self.enlargeEdge.left + self.enlargeEdge.right,
+                      self.bounds.size.height + self.enlargeEdge.top + self.enlargeEdge.bottom);
+}
+
 // 重写此方法将按钮的点击范围扩大
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-    CGRect bounds = self.bounds;
-    
-    // 扩大点击区域
-    if (self.enlargeClickRange) {
-        bounds = CGRectInset(bounds, -20, -20);
+    CGRect rect = [self enlargedRect];
+    if (CGRectEqualToRect(rect, self.bounds)) {
+        return [super pointInside:point withEvent:event];
     }
-    
-    // 若点击的点在新的bounds里面。就返回yes
-    return CGRectContainsPoint(bounds, point);
+    return CGRectContainsPoint(rect, point);
 }
 
 @end
@@ -217,9 +220,14 @@
     if ([self.previewDelegate respondsToSelector:@selector(sliderViewPreviewMargin:)]) {
         margin = [self.previewDelegate sliderViewPreviewMargin:self];
     }
+    
     CGPoint point = [self convertPoint:self.sliderBtn.center toView:self.superview];
+    if (!self.isPreviewChangePosition) {
+        point.x = self.superview.frame.size.width * 0.5;
+    }
     
     if (self.preview) {
+        NSLog(@"%f", self.sliderBtn.gk_height);
         self.preview.gk_centerX = point.x;
         self.preview.gk_centerY = point.y - self.sliderBtn.gk_height * 0.5 - self.preview.gk_height * 0.5 - margin;
     }
@@ -229,6 +237,11 @@
  添加子视图
  */
 - (void)addSubViews {
+    self.isSliderAllowTapped      = YES;
+    self.isSliderBlockAllowTapped = YES;
+    self.isPreviewChangePosition  = YES;
+    self.sliderBlockEnlargeEdge   = UIEdgeInsetsMake(10, 10, 10, 10);
+    
     self.backgroundColor = [UIColor clearColor];
     
     [self addSubview:self.bgProgressView];
@@ -241,9 +254,6 @@
     self.bufferProgressView.frame = self.bgProgressView.frame;
     self.sliderProgressView.frame = self.bgProgressView.frame;
     self.sliderBtn.frame          = CGRectMake(0, 0, kSliderBtnWH, kSliderBtnWH);
-    
-    self.isSliderAllowTapped      = YES;
-    self.isSliderBlockAllowTapped = YES;
 }
 
 #pragma mark - Setter
@@ -568,7 +578,7 @@
         [_sliderBtn addTarget:self action:@selector(sliderBtnTouchEnded:) forControlEvents:UIControlEventTouchUpOutside];
         [_sliderBtn addTarget:self action:@selector(sliderBtnDragMoving:event:) forControlEvents:UIControlEventTouchDragInside];
         [_sliderBtn addTarget:self action:@selector(sliderBtnDragMoving:event:) forControlEvents:UIControlEventTouchDragOutside];
-        _sliderBtn.enlargeClickRange = YES;
+        _sliderBtn.enlargeEdge = self.sliderBlockEnlargeEdge;
     }
     return _sliderBtn;
 }

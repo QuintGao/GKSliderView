@@ -35,6 +35,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
 
 @property (weak, nonatomic) IBOutlet GKSliderView *lineSliderView;
 
+@property (nonatomic, assign) BOOL isShowChange;
+
 @end
 
 @implementation GKViewController
@@ -103,7 +105,6 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     self.customSliderView.maximumTrackTintColor = UIColor.whiteColor;
     self.customSliderView.minimumTrackTintColor = UIColor.redColor;
     self.customSliderView.sliderHeight = 2;
-    self.customSliderView.sliderBtn.enlargeClickRange = YES;
     self.customSliderView.sliderBtn.backgroundColor = UIColor.whiteColor;
     self.customSliderView.sliderBtn.layer.cornerRadius = 7.0f;
     self.customSliderView.sliderBtn.layer.masksToBounds = YES;
@@ -121,6 +122,7 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     self.wxSliderView.sliderBtn.backgroundColor = UIColor.whiteColor;
     self.wxSliderView.sliderBtn.layer.masksToBounds = YES;
     self.wxSliderView.delegate = self;
+    self.wxSliderView.previewDelegate = self;
     [self showSmallSlider];
     
     self.lineSliderView.maximumTrackTintColor = UIColor.grayColor;
@@ -138,8 +140,28 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
 - (void)showSmallSlider {
     CGRect frame = self.wxSliderView.sliderBtn.frame;
     frame.size = CGSizeMake(8, 8);
+    self.wxSliderView.sliderHeight = 3;
     self.wxSliderView.sliderBtn.frame = frame;
     self.wxSliderView.sliderBtn.layer.cornerRadius = 4;
+}
+
+- (void)showLargeSlider {
+    CGRect frame = self.wxSliderView.sliderBtn.frame;
+    frame.size = CGSizeMake(20, 20);
+    self.wxSliderView.sliderHeight = 5;
+    self.wxSliderView.sliderBtn.frame = frame;
+    self.wxSliderView.sliderBtn.layer.cornerRadius = 10;
+}
+
+- (void)showChangeSlider {
+    if (self.isShowChange) return;
+    self.isShowChange = YES;
+    CGRect frame = self.wxSliderView.sliderBtn.frame;
+    frame.size = CGSizeMake(10, 30);
+    self.wxSliderView.sliderHeight = 10;
+    self.wxSliderView.sliderBtn.frame = frame;
+    self.wxSliderView.sliderBtn.layer.cornerRadius = 5;
+    self.wxSliderView.bgCornerRadius = 5;
 }
 
 - (void)showLineLoading {
@@ -153,15 +175,15 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
 #pragma mark - GKSliderViewDelegate
 - (void)sliderView:(GKSliderView *)sliderView touchBegan:(float)value {
     if (sliderView == self.wxSliderView) {
-        CGRect frame = self.wxSliderView.sliderBtn.frame;
-        frame.size = CGSizeMake(20, 20);
-        self.wxSliderView.sliderBtn.frame = frame;
-        self.wxSliderView.sliderBtn.layer.cornerRadius = 10;
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showSmallSlider) object:nil];
+        [self showLargeSlider];
     }
 }
 
 - (void)sliderView:(GKSliderView *)sliderView touchEnded:(float)value {
     if (sliderView == self.wxSliderView) {
+        self.isShowChange = NO;
+        [self showLargeSlider];
         // 3秒后显示小slider
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showSmallSlider) object:nil];
         [self performSelector:@selector(showSmallSlider) withObject:nil afterDelay:3.0f];
@@ -187,6 +209,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
 //        frame.size.width += 4;
 //        frame.size.height = 14;
 //        self.customSliderView.sliderBtn.frame = frame;
+    }else if (sliderView == self.wxSliderView) {
+        [self showChangeSlider];
     }
 }
 
@@ -210,12 +234,28 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
         frame.size.height = 20;
         preview.frame = frame;
         return preview;
+    }else if (sliderView == self.wxSliderView) {
+        GKSliderButton *preview = [[GKSliderButton alloc] init];
+        [preview setTitle:@"00:00 / 01:00" forState:UIControlStateNormal];
+        [preview setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        preview.titleLabel.font = [UIFont systemFontOfSize:15];
+        [preview sizeToFit];
+        CGRect frame = preview.frame;
+        frame.size.width += 6;
+        frame.size.height += 10;
+        preview.frame = frame;
+        return preview;
     }
     return nil;
 }
 
 - (CGFloat)sliderViewPreviewMargin:(GKSliderView *)sliderView {
-    return 20;
+    if (sliderView == self.customSliderView) {
+        return 20;
+    }else if (sliderView == self.wxSliderView) {
+        return 80;
+    }
+    return 0;
 }
 
 - (void)sliderView:(GKSliderView *)sliderView preview:(UIView *)preview valueChanged:(float)value {
@@ -226,6 +266,14 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
         NSString *total = [self timeFormattedMS:totalTime];
         NSString *current = [self timeFormattedMS:currentTime];
         NSString *text = [NSString stringWithFormat:@"%@/%@", current, total];
+        [btn setTitle:text forState:UIControlStateNormal];
+    }else if (sliderView == self.wxSliderView) {
+        GKSliderButton *btn = (GKSliderButton *)preview;
+        int totalTime = 1 * 60;
+        int currentTime = totalTime * value;
+        NSString *total = [self timeFormattedMS:totalTime];
+        NSString *current = [self timeFormattedMS:currentTime];
+        NSString *text = [NSString stringWithFormat:@"%@ / %@", current, total];
         [btn setTitle:text forState:UIControlStateNormal];
     }
 }

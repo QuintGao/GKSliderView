@@ -57,8 +57,7 @@
 
 @interface GKSliderButton : UIButton
 
-// 是否扩大点击范围，默认NO
-@property (nonatomic, assign) BOOL enlargeClickRange;
+@property (nonatomic, assign) UIEdgeInsets enlargeEdge;
 
 @end
 
@@ -125,8 +124,14 @@
 /** 滑块 */
 @property (nonatomic, strong, readonly) GKSliderButton *sliderBtn;
 
+/// 滑块扩大的点击范围，默认UIEdgeInsetsMake(10, 10, 10, 10)
+@property (nonatomic, assign) UIEdgeInsets sliderBlockEnlargeEdge;
+
 /// 预览视图
 @property (nonatomic, strong, readonly) UIView *preview;
+
+/// 预览视图位置是否跟随滑块改变，默认YES，为NO时显示在中间
+@property (nonatomic, assign) BOOL isPreviewChangePosition;
 
 /// 加载动画的高度，默认滑杆的高度
 @property (nonatomic, assign) CGFloat lineHeight;
