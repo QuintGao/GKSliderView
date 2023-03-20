@@ -227,7 +227,6 @@
     }
     
     if (self.preview) {
-        NSLog(@"%f", self.sliderBtn.gk_height);
         self.preview.gk_centerX = point.x;
         self.preview.gk_centerY = point.y - self.sliderBtn.gk_height * 0.5 - self.preview.gk_height * 0.5 - margin;
     }
