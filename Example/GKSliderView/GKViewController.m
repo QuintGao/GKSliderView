@@ -123,6 +123,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     self.wxSliderView.sliderBtn.layer.masksToBounds = YES;
     self.wxSliderView.delegate = self;
     self.wxSliderView.previewDelegate = self;
+    self.wxSliderView.isPreviewChangePosition = NO;
+    self.wxSliderView.isSliderAllowDragged = YES;
     [self showSmallSlider];
     
     self.lineSliderView.maximumTrackTintColor = UIColor.grayColor;
@@ -134,7 +136,6 @@ typedef NS_ENUM(NSUInteger, GradientType) {// 渐变方向
     self.lineSliderView.bufferValue = 0.7;
     self.lineSliderView.value = 0.4;
     [self showLineLoading];
-    
 }
 
 - (void)showSmallSlider {

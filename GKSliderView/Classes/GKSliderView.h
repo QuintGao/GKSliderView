@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-// 过期提醒
-#define GKSliderViewDeprecated(DESCRIPTION) __attribute__((deprecated(DESCRIPTION)))
-
 @class GKSliderView;
 
 @protocol GKSliderViewPreviewDelegate <NSObject>
@@ -20,7 +17,7 @@
 - (UIView *)sliderViewSetupPreview:(GKSliderView *)sliderView;
 
 @optional
-/// 预览视图与滑块的间距，默认10
+/// 预览视图底部与滑杆中心的间距，默认10
 /// @param sliderView sliderView
 - (CGFloat)sliderViewPreviewMargin:(GKSliderView *)sliderView;
 
@@ -35,15 +32,6 @@
 @protocol GKSliderViewDelegate <NSObject>
 
 @optional
-// 滑块滑动开始
-- (void)sliderTouchBegan:(float)value GKSliderViewDeprecated("使用sliderView:(GKSliderView *)sliderView touchBegan:(float)value代替");
-// 滑块滑动中
-- (void)sliderValueChanged:(float)value GKSliderViewDeprecated("使用sliderView:(GKSliderView *)sliderView valueChanged:(float)value代替");
-// 滑块滑动结束
-- (void)sliderTouchEnded:(float)value GKSliderViewDeprecated("使用sliderView:(GKSliderView *)sliderView touchEnded:(float)value代替");
-// 滑杆点击
-- (void)sliderTapped:(float)value GKSliderViewDeprecated("使用sliderView:(GKSliderView *)sliderView tapped:(float)value代替");
-
 /// 滑块滑动开始
 - (void)sliderView:(GKSliderView *)sliderView touchBegan:(float)value;
 /// 滑块滑动结束
@@ -99,6 +87,9 @@
 /** 滑杆是否允许点击，默认是YES */
 @property (nonatomic, assign) BOOL isSliderAllowTapped;
 
+/// 滑杆是否允许拖拽，默认是NO
+@property (nonatomic, assign) BOOL isSliderAllowDragged;
+
 /** 设置滑杆的高度,默认3 */
 @property (nonatomic, assign) CGFloat sliderHeight;
 
@@ -135,6 +126,9 @@
 
 /// 加载动画的高度，默认滑杆的高度
 @property (nonatomic, assign) CGFloat lineHeight;
+
+/// 是否正在拖拽
+@property (nonatomic, assign, readonly) BOOL isDragging;
 
 // 设置滑块背景色
 - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
