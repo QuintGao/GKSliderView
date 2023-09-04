@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06382A47D4F15550B983F0FF99F4AFCF /* Pods-GKSliderView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DCA2FA17EA52727F9C31833B84E7BA /* Pods-GKSliderView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1292BF59676FB42A1D3A5C10BF1618DA /* GKSliderView.h in Headers */ = {isa = PBXBuildFile; fileRef = AACDC149C4F05C548C9B6B34A5E5E7AC /* GKSliderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		134AD04EBFF9BD9A71F5F3EF04613E51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		19460A85D65483EFA6C67CF553F270E9 /* Pods-GKSliderView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C29A4668E10DF12D33F9F2068EA1DE76 /* Pods-GKSliderView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3562333ACA07FEEE17A0AE638BF8F581 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		4328804778229358BD14C058F66D65F7 /* Pods-GKSliderView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0868A03B6AF38851C1FAD8A53BCD96DB /* Pods-GKSliderView_Tests-dummy.m */; };
-		92D1CECF8A9E228AC0B24D77DC2DABB4 /* GKSliderView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2016F2FCB9E9CF43E7B49B6E830B9783 /* GKSliderView-dummy.m */; };
-		C0AC63C5AFA003818E92A5A2DAA47811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		D5815BFAA8F2C263F3024D37841A9EAC /* Pods-GKSliderView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A30C6661145426C3DE27B9CF86F756 /* Pods-GKSliderView_Example-dummy.m */; };
-		D62C9E553D44DC3315C671091AF2C3DD /* GKSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCE9F3FFE05C3792CB729417775AC2 /* GKSliderView.m */; };
-		DAF1FC9983A9C67E83D9DA90B6DDB14D /* GKSliderView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C27C2B817053333E2261831B0D213BE /* GKSliderView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01C518E2012C2CD145304E78EE9364F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		099FFEBBFE1E5DBF3F70EC2100B4081D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1E545FC32FF008711729F37D7C296B0F /* Pods-GKSliderView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0868A03B6AF38851C1FAD8A53BCD96DB /* Pods-GKSliderView_Tests-dummy.m */; };
+		32E1DAF82F5E4A52AA52FF1977A81008 /* Pods-GKSliderView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DCA2FA17EA52727F9C31833B84E7BA /* Pods-GKSliderView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F61C08CA5DF705D4E69AEA4562E202A /* GKSliderView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C27C2B817053333E2261831B0D213BE /* GKSliderView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67932C8735D2BECF8DBDBD7D46D50061 /* GKSliderView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2016F2FCB9E9CF43E7B49B6E830B9783 /* GKSliderView-dummy.m */; };
+		71C6940A5DBDCD0B22CA318DD1100F45 /* Pods-GKSliderView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C29A4668E10DF12D33F9F2068EA1DE76 /* Pods-GKSliderView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		725E60128A714D13748A148F5BB4AC13 /* Pods-GKSliderView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A30C6661145426C3DE27B9CF86F756 /* Pods-GKSliderView_Example-dummy.m */; };
+		B3D14B04521CA88DC2498AE26D3A9DF8 /* GKSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFCE9F3FFE05C3792CB729417775AC2 /* GKSliderView.m */; };
+		BEEBD3CA15A966A971F457EBE246B37C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D220373303FE046016B68DB6CEC58272 /* GKSliderView.h in Headers */ = {isa = PBXBuildFile; fileRef = AACDC149C4F05C548C9B6B34A5E5E7AC /* GKSliderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		18EF467E9AB8FDF90870DC7521D6783B /* PBXContainerItemProxy */ = {
+		169A2ED36DFAA89885030FBFDA55C89A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1EF8BBBFC3709A3B7D4798483B0764E1;
 			remoteInfo = GKSliderView;
 		};
-		DFF5930C6C953C77F2D009D6AD5F05ED /* PBXContainerItemProxy */ = {
+		6AA8B14E43E3495DFA6E6E5736B052E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -39,33 +39,33 @@
 
 /* Begin PBXFileReference section */
 		001F4B83796EAF1E3611D8588F354347 /* GKSliderView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GKSliderView.modulemap; sourceTree = "<group>"; };
-		0835B8D86D09F9141590F6E8B418315D /* GKSliderView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GKSliderView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0835B8D86D09F9141590F6E8B418315D /* GKSliderView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GKSliderView; path = GKSliderView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0868A03B6AF38851C1FAD8A53BCD96DB /* Pods-GKSliderView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GKSliderView_Tests-dummy.m"; sourceTree = "<group>"; };
 		0DFCE9F3FFE05C3792CB729417775AC2 /* GKSliderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GKSliderView.m; path = GKSliderView/Classes/GKSliderView.m; sourceTree = "<group>"; };
 		0FE1A834105DCD399E5526B02AB32755 /* Pods-GKSliderView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GKSliderView_Tests.modulemap"; sourceTree = "<group>"; };
 		11E582B798963DAF448703D4CF1F8BA6 /* GKSliderView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKSliderView.release.xcconfig; sourceTree = "<group>"; };
-		1CDEE4E07CD14655176BA4B20922D01C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1CDEE4E07CD14655176BA4B20922D01C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		2016F2FCB9E9CF43E7B49B6E830B9783 /* GKSliderView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GKSliderView-dummy.m"; sourceTree = "<group>"; };
 		27F98C66609A9AAC83BD635C79A54B3C /* Pods-GKSliderView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKSliderView_Tests-Info.plist"; sourceTree = "<group>"; };
 		2C125F2076075562774D1E2B5E699FF0 /* Pods-GKSliderView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GKSliderView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		306A33AEE3D18A772BD8986CD8FD20F5 /* Pods-GKSliderView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GKSliderView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		37B50C8B6DAD9C3C82AE3F138DA0B164 /* Pods-GKSliderView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKSliderView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		4A6963759CBE0DE749938F5B30B0EA33 /* GKSliderView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GKSliderView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4A6963759CBE0DE749938F5B30B0EA33 /* GKSliderView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GKSliderView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		551679909B4729FCAB474007A74D0AD6 /* GKSliderView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GKSliderView.debug.xcconfig; sourceTree = "<group>"; };
 		5541BFFCBF86AF0D33FEB4E8C0445FC2 /* GKSliderView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKSliderView-prefix.pch"; sourceTree = "<group>"; };
 		5B084B9284A4C9AD6D57B998951E47FC /* Pods-GKSliderView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKSliderView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		605FA97A1B1D6DB8E49705C63BBEDA2C /* Pods-GKSliderView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GKSliderView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		608B2471EDD1D6C050D2BD05214E4BBD /* Pods-GKSliderView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GKSliderView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6C27C2B817053333E2261831B0D213BE /* GKSliderView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GKSliderView-umbrella.h"; sourceTree = "<group>"; };
-		7115DAE38F494AC10F2630217AA5B225 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7115DAE38F494AC10F2630217AA5B225 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8A82939C0FAE253B2942B8115103796B /* Pods_GKSliderView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GKSliderView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A82939C0FAE253B2942B8115103796B /* Pods-GKSliderView_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GKSliderView_Example"; path = Pods_GKSliderView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F62C7B756C7B1B230BB8A64B87B571 /* Pods-GKSliderView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GKSliderView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2B5D14F49E44BA9E63DE6C9583289E7 /* Pods-GKSliderView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GKSliderView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A4DCA2FA17EA52727F9C31833B84E7BA /* Pods-GKSliderView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GKSliderView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		AACDC149C4F05C548C9B6B34A5E5E7AC /* GKSliderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GKSliderView.h; path = GKSliderView/Classes/GKSliderView.h; sourceTree = "<group>"; };
-		AC9A6D0E9964EAFB71CB46E86C29C1FF /* Pods_GKSliderView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GKSliderView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9A6D0E9964EAFB71CB46E86C29C1FF /* Pods-GKSliderView_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GKSliderView_Tests"; path = Pods_GKSliderView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A30C6661145426C3DE27B9CF86F756 /* Pods-GKSliderView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GKSliderView_Example-dummy.m"; sourceTree = "<group>"; };
 		C29A4668E10DF12D33F9F2068EA1DE76 /* Pods-GKSliderView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GKSliderView_Example-umbrella.h"; sourceTree = "<group>"; };
 		C37A9197A6F5566BA309D9F2B52209E8 /* Pods-GKSliderView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GKSliderView_Example-Info.plist"; sourceTree = "<group>"; };
@@ -75,43 +75,33 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1564BCDA31D40B18F3FDD069ED327AE2 /* Frameworks */ = {
+		90BCC7AE9FD7D4FD79A64A5B79AA3B83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AC63C5AFA003818E92A5A2DAA47811 /* Foundation.framework in Frameworks */,
+				099FFEBBFE1E5DBF3F70EC2100B4081D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		304A2D3AE6ED168A1612FEC61E04FAD0 /* Frameworks */ = {
+		CAE888B035A8B22E05C19CE7D9025EBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				134AD04EBFF9BD9A71F5F3EF04613E51 /* Foundation.framework in Frameworks */,
+				01C518E2012C2CD145304E78EE9364F2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31D4ABAA13F75AD19B7DC5E9B3978904 /* Frameworks */ = {
+		CF29C682117D993AB8DC416ED482774C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3562333ACA07FEEE17A0AE638BF8F581 /* Foundation.framework in Frameworks */,
+				BEEBD3CA15A966A971F457EBE246B37C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1AE2D17945827E1788D5FD82B5E76839 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0835B8D86D09F9141590F6E8B418315D /* GKSliderView.framework */,
-				8A82939C0FAE253B2942B8115103796B /* Pods_GKSliderView_Example.framework */,
-				AC9A6D0E9964EAFB71CB46E86C29C1FF /* Pods_GKSliderView_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		27899F95790E3ED19BDACEFED0F7BED3 /* GKSliderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +129,16 @@
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		96FC2F551792457DEC52DD1B3E51CBC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0835B8D86D09F9141590F6E8B418315D /* GKSliderView */,
+				8A82939C0FAE253B2942B8115103796B /* Pods-GKSliderView_Example */,
+				AC9A6D0E9964EAFB71CB46E86C29C1FF /* Pods-GKSliderView_Tests */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BD02BA34467D25A98A9750993130A56F /* Pods-GKSliderView_Example */ = {
@@ -188,7 +188,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				C3DC92E3882A6E9913342795E859997B /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				1AE2D17945827E1788D5FD82B5E76839 /* Products */,
+				96FC2F551792457DEC52DD1B3E51CBC0 /* Products */,
 				2DDC1768A0EEAECBB2DAB75F7FCF2A3E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -229,28 +229,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5AE93B40D67B20532C0B7D1A0C1F454F /* Headers */ = {
+		5ACB56DA4496A736D49B9CF3D8ADCDEF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF1FC9983A9C67E83D9DA90B6DDB14D /* GKSliderView-umbrella.h in Headers */,
-				1292BF59676FB42A1D3A5C10BF1618DA /* GKSliderView.h in Headers */,
+				32E1DAF82F5E4A52AA52FF1977A81008 /* Pods-GKSliderView_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F1F8981704A9F8C31A53C8B9D48D259 /* Headers */ = {
+		A3E39E9B87D808EBC7D8FA2241427201 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06382A47D4F15550B983F0FF99F4AFCF /* Pods-GKSliderView_Tests-umbrella.h in Headers */,
+				D220373303FE046016B68DB6CEC58272 /* GKSliderView.h in Headers */,
+				4F61C08CA5DF705D4E69AEA4562E202A /* GKSliderView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C18FAE3272CB8267EA71497B3FC7FCC3 /* Headers */ = {
+		FE2560778349861F2BD4F24E7D84B7A6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19460A85D65483EFA6C67CF553F270E9 /* Pods-GKSliderView_Example-umbrella.h in Headers */,
+				71C6940A5DBDCD0B22CA318DD1100F45 /* Pods-GKSliderView_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,12 +259,12 @@
 /* Begin PBXNativeTarget section */
 		1EF8BBBFC3709A3B7D4798483B0764E1 /* GKSliderView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 448B26DE30171E3DDA4FFA9C01F5996B /* Build configuration list for PBXNativeTarget "GKSliderView" */;
+			buildConfigurationList = 8ECAC0ABA07CFB285C4A6428A1BCEB9E /* Build configuration list for PBXNativeTarget "GKSliderView" */;
 			buildPhases = (
-				5AE93B40D67B20532C0B7D1A0C1F454F /* Headers */,
-				1FA1E08B7DE79E3EC6A26E5D647ECE53 /* Sources */,
-				31D4ABAA13F75AD19B7DC5E9B3978904 /* Frameworks */,
-				55BC497D4A0EC94028364931944F670A /* Resources */,
+				A3E39E9B87D808EBC7D8FA2241427201 /* Headers */,
+				0FE58DEB54775F9C4FF9B05ADD6112C4 /* Sources */,
+				90BCC7AE9FD7D4FD79A64A5B79AA3B83 /* Frameworks */,
+				331F75B98D4C8CD8DE13411EAF82FC78 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -272,45 +272,45 @@
 			);
 			name = GKSliderView;
 			productName = GKSliderView;
-			productReference = 0835B8D86D09F9141590F6E8B418315D /* GKSliderView.framework */;
+			productReference = 0835B8D86D09F9141590F6E8B418315D /* GKSliderView */;
 			productType = "com.apple.product-type.framework";
 		};
 		69BE75CB9E98AE63E0EE311AF8CD3A27 /* Pods-GKSliderView_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FC26ED6C3C44D7832301EA090066011 /* Build configuration list for PBXNativeTarget "Pods-GKSliderView_Example" */;
+			buildConfigurationList = 159E44B296711BD05FD2193827A51A28 /* Build configuration list for PBXNativeTarget "Pods-GKSliderView_Example" */;
 			buildPhases = (
-				C18FAE3272CB8267EA71497B3FC7FCC3 /* Headers */,
-				06D359FBA752ACC06A973F6C4F5F37A3 /* Sources */,
-				1564BCDA31D40B18F3FDD069ED327AE2 /* Frameworks */,
-				63503F9671B84CE381D8C32321920274 /* Resources */,
+				FE2560778349861F2BD4F24E7D84B7A6 /* Headers */,
+				7FFBD11EDA107FC04096496074758EC4 /* Sources */,
+				CAE888B035A8B22E05C19CE7D9025EBA /* Frameworks */,
+				E8D7AB310BBBFA7B6F242C710106A0D7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2C9690452F96B94F868607F8888FC282 /* PBXTargetDependency */,
+				186EDE8DB124B1678F5DFFE4068ECD47 /* PBXTargetDependency */,
 			);
 			name = "Pods-GKSliderView_Example";
-			productName = "Pods-GKSliderView_Example";
-			productReference = 8A82939C0FAE253B2942B8115103796B /* Pods_GKSliderView_Example.framework */;
+			productName = Pods_GKSliderView_Example;
+			productReference = 8A82939C0FAE253B2942B8115103796B /* Pods-GKSliderView_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		955A5F3BFEA100D922BDBCFC9D42453C /* Pods-GKSliderView_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4BF92E07EAE21CABDC29920D22FE39E /* Build configuration list for PBXNativeTarget "Pods-GKSliderView_Tests" */;
+			buildConfigurationList = B060A2BEE12BB3EC9A93998E2E9EE023 /* Build configuration list for PBXNativeTarget "Pods-GKSliderView_Tests" */;
 			buildPhases = (
-				6F1F8981704A9F8C31A53C8B9D48D259 /* Headers */,
-				166B71D00844D766C5BA272E7F802C7D /* Sources */,
-				304A2D3AE6ED168A1612FEC61E04FAD0 /* Frameworks */,
-				F67FA48544155E67EB8619577B1EFE52 /* Resources */,
+				5ACB56DA4496A736D49B9CF3D8ADCDEF /* Headers */,
+				B41353560B665F059DCC9D4560C25C46 /* Sources */,
+				CF29C682117D993AB8DC416ED482774C /* Frameworks */,
+				62FFC934270F504293E670BDF2E754E7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0F562A1D7401F74EB34131BD29FE42AD /* PBXTargetDependency */,
+				B9AD114347659F98CA4836EA3E50EBF7 /* PBXTargetDependency */,
 			);
 			name = "Pods-GKSliderView_Tests";
-			productName = "Pods-GKSliderView_Tests";
-			productReference = AC9A6D0E9964EAFB71CB46E86C29C1FF /* Pods_GKSliderView_Tests.framework */;
+			productName = Pods_GKSliderView_Tests;
+			productReference = AC9A6D0E9964EAFB71CB46E86C29C1FF /* Pods-GKSliderView_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -319,19 +319,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1AE2D17945827E1788D5FD82B5E76839 /* Products */;
+			productRefGroup = 96FC2F551792457DEC52DD1B3E51CBC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -343,21 +343,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		55BC497D4A0EC94028364931944F670A /* Resources */ = {
+		331F75B98D4C8CD8DE13411EAF82FC78 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		63503F9671B84CE381D8C32321920274 /* Resources */ = {
+		62FFC934270F504293E670BDF2E754E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F67FA48544155E67EB8619577B1EFE52 /* Resources */ = {
+		E8D7AB310BBBFA7B6F242C710106A0D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,82 +367,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		06D359FBA752ACC06A973F6C4F5F37A3 /* Sources */ = {
+		0FE58DEB54775F9C4FF9B05ADD6112C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5815BFAA8F2C263F3024D37841A9EAC /* Pods-GKSliderView_Example-dummy.m in Sources */,
+				B3D14B04521CA88DC2498AE26D3A9DF8 /* GKSliderView.m in Sources */,
+				67932C8735D2BECF8DBDBD7D46D50061 /* GKSliderView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		166B71D00844D766C5BA272E7F802C7D /* Sources */ = {
+		7FFBD11EDA107FC04096496074758EC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4328804778229358BD14C058F66D65F7 /* Pods-GKSliderView_Tests-dummy.m in Sources */,
+				725E60128A714D13748A148F5BB4AC13 /* Pods-GKSliderView_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FA1E08B7DE79E3EC6A26E5D647ECE53 /* Sources */ = {
+		B41353560B665F059DCC9D4560C25C46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D1CECF8A9E228AC0B24D77DC2DABB4 /* GKSliderView-dummy.m in Sources */,
-				D62C9E553D44DC3315C671091AF2C3DD /* GKSliderView.m in Sources */,
+				1E545FC32FF008711729F37D7C296B0F /* Pods-GKSliderView_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0F562A1D7401F74EB34131BD29FE42AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-GKSliderView_Example";
-			target = 69BE75CB9E98AE63E0EE311AF8CD3A27 /* Pods-GKSliderView_Example */;
-			targetProxy = DFF5930C6C953C77F2D009D6AD5F05ED /* PBXContainerItemProxy */;
-		};
-		2C9690452F96B94F868607F8888FC282 /* PBXTargetDependency */ = {
+		186EDE8DB124B1678F5DFFE4068ECD47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GKSliderView;
 			target = 1EF8BBBFC3709A3B7D4798483B0764E1 /* GKSliderView */;
-			targetProxy = 18EF467E9AB8FDF90870DC7521D6783B /* PBXContainerItemProxy */;
+			targetProxy = 169A2ED36DFAA89885030FBFDA55C89A /* PBXContainerItemProxy */;
+		};
+		B9AD114347659F98CA4836EA3E50EBF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GKSliderView_Example";
+			target = 69BE75CB9E98AE63E0EE311AF8CD3A27 /* Pods-GKSliderView_Example */;
+			targetProxy = 6AA8B14E43E3495DFA6E6E5736B052E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1011933E6A6BFD17FE05ECFEB0697C49 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB90291C252B166216A5B083009479E7 /* Pods-GKSliderView_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GKSliderView_Tests/Pods-GKSliderView_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GKSliderView_Tests/Pods-GKSliderView_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,10 +476,11 @@
 			};
 			name = Debug;
 		};
-		45BA04676CB55A5A65D225124B5BD88D /* Debug */ = {
+		37070323FB8BC070838C59E1670A87EC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 551679909B4729FCAB474007A74D0AD6 /* GKSliderView.debug.xcconfig */;
+			baseConfigurationReference = 306A33AEE3D18A772BD8986CD8FD20F5 /* Pods-GKSliderView_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -521,25 +489,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GKSliderView/GKSliderView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GKSliderView/GKSliderView-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-GKSliderView_Tests/Pods-GKSliderView_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GKSliderView/GKSliderView.modulemap";
-				PRODUCT_MODULE_NAME = GKSliderView;
-				PRODUCT_NAME = GKSliderView;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GKSliderView_Tests/Pods-GKSliderView_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		BD1A98113305814F67E54E98D2DBFA88 /* Release */ = {
+		5207C1EF415DDBB94E1AC6DAF8C0DCC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 11E582B798963DAF448703D4CF1F8BA6 /* GKSliderView.release.xcconfig */;
 			buildSettings = {
@@ -570,9 +539,9 @@
 			};
 			name = Release;
 		};
-		BE2EC795F205628BD2487113B5E370C5 /* Debug */ = {
+		8530477F049B11B174262A6F0B8B6614 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96F62C7B756C7B1B230BB8A64B87B571 /* Pods-GKSliderView_Example.debug.xcconfig */;
+			baseConfigurationReference = 608B2471EDD1D6C050D2BD05214E4BBD /* Pods-GKSliderView_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -597,14 +566,15 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		C3A1137A5FD5074C771496F569C347D1 /* Release */ = {
+		8829CDBCF406D7BA4535071F4FD2F6A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 608B2471EDD1D6C050D2BD05214E4BBD /* Pods-GKSliderView_Example.release.xcconfig */;
+			baseConfigurationReference = DB90291C252B166216A5B083009479E7 /* Pods-GKSliderView_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -615,12 +585,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GKSliderView_Example/Pods-GKSliderView_Example-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-GKSliderView_Tests/Pods-GKSliderView_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GKSliderView_Example/Pods-GKSliderView_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-GKSliderView_Tests/Pods-GKSliderView_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -690,15 +660,16 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		FCCF440FA6B3EC3AA8037ADB0772B22E /* Debug */ = {
+		D6482D2CFD11EEF3A8B3ADE97D10418D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 306A33AEE3D18A772BD8986CD8FD20F5 /* Pods-GKSliderView_Tests.debug.xcconfig */;
+			baseConfigurationReference = 96F62C7B756C7B1B230BB8A64B87B571 /* Pods-GKSliderView_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -709,12 +680,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GKSliderView_Tests/Pods-GKSliderView_Tests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-GKSliderView_Example/Pods-GKSliderView_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GKSliderView_Tests/Pods-GKSliderView_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-GKSliderView_Example/Pods-GKSliderView_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -728,23 +699,44 @@
 			};
 			name = Debug;
 		};
+		E4200E9E950125C682D7DEE63BDC7BDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 551679909B4729FCAB474007A74D0AD6 /* GKSliderView.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GKSliderView/GKSliderView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GKSliderView/GKSliderView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GKSliderView/GKSliderView.modulemap";
+				PRODUCT_MODULE_NAME = GKSliderView;
+				PRODUCT_NAME = GKSliderView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FC26ED6C3C44D7832301EA090066011 /* Build configuration list for PBXNativeTarget "Pods-GKSliderView_Example" */ = {
+		159E44B296711BD05FD2193827A51A28 /* Build configuration list for PBXNativeTarget "Pods-GKSliderView_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE2EC795F205628BD2487113B5E370C5 /* Debug */,
-				C3A1137A5FD5074C771496F569C347D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		448B26DE30171E3DDA4FFA9C01F5996B /* Build configuration list for PBXNativeTarget "GKSliderView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45BA04676CB55A5A65D225124B5BD88D /* Debug */,
-				BD1A98113305814F67E54E98D2DBFA88 /* Release */,
+				D6482D2CFD11EEF3A8B3ADE97D10418D /* Debug */,
+				8530477F049B11B174262A6F0B8B6614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -758,11 +750,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4BF92E07EAE21CABDC29920D22FE39E /* Build configuration list for PBXNativeTarget "Pods-GKSliderView_Tests" */ = {
+		8ECAC0ABA07CFB285C4A6428A1BCEB9E /* Build configuration list for PBXNativeTarget "GKSliderView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCCF440FA6B3EC3AA8037ADB0772B22E /* Debug */,
-				1011933E6A6BFD17FE05ECFEB0697C49 /* Release */,
+				E4200E9E950125C682D7DEE63BDC7BDD /* Debug */,
+				5207C1EF415DDBB94E1AC6DAF8C0DCC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B060A2BEE12BB3EC9A93998E2E9EE023 /* Build configuration list for PBXNativeTarget "Pods-GKSliderView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37070323FB8BC070838C59E1670A87EC /* Debug */,
+				8829CDBCF406D7BA4535071F4FD2F6A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

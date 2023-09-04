@@ -2,8 +2,8 @@
 //  main.m
 //  GKSliderView
 //
-//  Created by 1094887059@qq.com on 08/20/2020.
-//  Copyright (c) 2020 1094887059@qq.com. All rights reserved.
+//  Created by QuintGao on 08/20/2020.
+//  Copyright (c) 2020 QuintGao. All rights reserved.
 //
 
 @import UIKit;
