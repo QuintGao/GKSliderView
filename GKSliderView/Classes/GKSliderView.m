@@ -116,9 +116,9 @@
     
     CAAnimationGroup *animationGroup = [self.layer animationForKey:@"lineLoading"];
     CABasicAnimation *scaleAnimation = (CABasicAnimation *)animationGroup.animations.firstObject;
-    if (scaleAnimation) {
-        scaleAnimation.toValue = @(1.0f * frame.size.width);
-    }
+    if (!scaleAnimation) return;
+    if ([scaleAnimation.toValue isEqual: @(1.0 * frame.size.width)]) return;
+    scaleAnimation.toValue = @(1.0 * frame.size.width);
 }
 
 - (void)startLoading {
@@ -226,7 +226,10 @@
     
     [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([obj isKindOfClass:GKLineLoadingView.class]) {
-            obj.frame = self.bounds;
+            CGPoint center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5);
+            if (!CGPointEqualToPoint(obj.center, center)) {
+                obj.frame = self.bounds;
+            }
         }
     }];
     
