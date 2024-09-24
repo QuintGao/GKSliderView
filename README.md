@@ -30,6 +30,7 @@ GKSliderView is available under the MIT license. See the LICENSE file for more i
 
 ## 版本记录
 
+2024.09.24  1.2.3：修改最低支持版本为10
 2024.06.03  1.2.2：修复滑动滑杆可能出现CPU暴涨问题  
 2024.05.28  1.2.1：滑杆加载动画优化  
 2023.09.04  1.2.0：滑杆拖拽功能优化  

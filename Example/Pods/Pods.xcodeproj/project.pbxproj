@@ -319,8 +319,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -508,10 +508,11 @@
 			};
 			name = Debug;
 		};
-		5207C1EF415DDBB94E1AC6DAF8C0DCC1 /* Release */ = {
+		4FC1518B7CA6B2861E485F5F4E3A52C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 11E582B798963DAF448703D4CF1F8BA6 /* GKSliderView.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -523,7 +524,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GKSliderView/GKSliderView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GKSliderView/GKSliderView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GKSliderView/GKSliderView.modulemap";
 				PRODUCT_MODULE_NAME = GKSliderView;
@@ -699,10 +700,11 @@
 			};
 			name = Debug;
 		};
-		E4200E9E950125C682D7DEE63BDC7BDD /* Debug */ = {
+		FD22E010F812DE735200A17163F15345 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 551679909B4729FCAB474007A74D0AD6 /* GKSliderView.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -714,7 +716,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GKSliderView/GKSliderView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GKSliderView/GKSliderView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GKSliderView/GKSliderView.modulemap";
 				PRODUCT_MODULE_NAME = GKSliderView;
@@ -753,8 +755,8 @@
 		8ECAC0ABA07CFB285C4A6428A1BCEB9E /* Build configuration list for PBXNativeTarget "GKSliderView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4200E9E950125C682D7DEE63BDC7BDD /* Debug */,
-				5207C1EF415DDBB94E1AC6DAF8C0DCC1 /* Release */,
+				FD22E010F812DE735200A17163F15345 /* Debug */,
+				4FC1518B7CA6B2861E485F5F4E3A52C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

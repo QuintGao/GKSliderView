@@ -1,5 +1,5 @@
 PODS:
-  - GKSliderView (1.2.0)
+  - GKSliderView (1.2.3)
 
 DEPENDENCIES:
   - GKSliderView (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GKSliderView: 49480065d2155bbc219bde5f9136f785757ed8d4
+  GKSliderView: 7c6f853afeb0ae370bb8dce76ec669d6e9109d1d
 
 PODFILE CHECKSUM: 0cc20eeedcaa29816e52b8944c253a530c1f6c7e
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2
